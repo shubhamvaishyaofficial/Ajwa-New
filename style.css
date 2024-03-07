@@ -1,0 +1,69 @@
+/* 
+@keyframes fadeIn {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+.animate-fadeIn {
+    animation: fadeIn 2s;
+} */
+
+/* @keyframes slideIn {
+    0% {transform: translateY(-100%);}
+    100% {transform: translateY(0);}
+}
+.animate-slideIn {
+    animation: slideIn 1s;
+} */
+
+/* @keyframes rotate {
+    0% {transform: rotate(0deg);}
+    100% {transform: rotate(360deg);}
+}
+.animate-rotate {
+    animation: rotate 2s linear infinite;
+}
+animate-rotate */
+html {
+  scroll-behavior: smooth;
+}
+.loader {
+    border-top-color: #3498db;
+    border-left-color: #3498db;
+    border-bottom-color: transparent;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.loader_text {
+  display: inline-block;
+}
+
+@keyframes opacityScale {
+  0% { opacity: 0.2; transform: scale(0.8); }
+  50% { opacity: 0.8; transform: scale(1.2); }
+  100% { opacity: 0.2; transform: scale(0.8); }
+}
+
+.loader_text:nth-child(1) {
+  animation: opacityScale 2s infinite 0s
+}
+
+.loader_text:nth-child(2) {
+  animation: opacityScale 2s infinite 0s
+}
+
+.loader_text:nth-child(3) {
+  animation: opacityScale 2s infinite 0s 
+}
+
+.loader_text:nth-child(4) {
+  animation: opacityScale 2s infinite 0s 
+}
+
+
+
+

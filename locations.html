@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Commerce</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body class="font-serif bg-[#D2B48C]">
+    <!-- Navbar -->
+    <nav class="sticky top-0 z-50 flex items-center justify-between flex-wrap bg-[#f3f4f6] p-6">
+        <div class="flex items-center flex-shrink-0 text-[#d1b48c] mr-6">
+            <img src="./img/logo.png" alt="logo" class="ml-8 w-40 mr-2">
+        </div>
+        <div class="block lg:hidden">
+            <button id="menu-button"
+                class="flex items-center px-3 py-2 border rounded text-black border-[#d1b48c] hover:text-[#d1b48c] hover:border-[#d1b48c]">
+                <svg id="menu-icon" class="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                    <title>Menu</title>
+                    <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v15z" />
+                </svg>
+            </button>
+        </div>
+        <div id="menu" class="w-full block flex-grow lg:flex lg:items-center lg:w-auto hidden lg:justify-end space-x-4">
+            <div class="text-sm lg:flex-grow lg:flex lg:justify-end space-x-8">
+                <a href="./index.html" class="block mt-4 lg:inline-block lg:mt-0 text-black hover:text-[#d1b48c] ml-8">
+                    HOME
+                </a>
+                <a href="./about.html" class="block mt-4 lg:inline-block lg:mt-0 text-black hover:text-[#d1b48c] mr-4">
+                    ABOUT
+                </a>
+                <a href="./products.html"
+                    class="active relative block mt-4 lg:inline-block lg:mt-0 text-black hover:text-[#d1b48c] mr-4">
+                    <div class="flex items-center">
+                        <span>PRODUCTS</span>
+                    </div>
+                </a>
+                <a href="./blogs.html" class="block mt-4 lg:inline-block lg:mt-0 text-black hover:text-[#d1b48c] mr-4">
+                    BLOGS
+                </a>
+                <a href="./contact.html" class="block mt-4 lg:inline-block lg:mt-0 text-black hover:text-[#d1b48c] mr-4">
+                    CONTACT
+                </a>
+                <a href="#locations"
+                    class="block mt-4 lg:inline-block lg:mt-0 text-[#d1b48c] hover:text-[#62acb4] mr-4">
+                    LOCATIONS
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <article>
+            <section class="relative">
+                <img src="./img/banner.jpg" alt="">
+                <div
+                    class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white text-2xl md:text-4xl lg:text-5xl font-bold">
+                    <a class="text-black hover:text-white" href="./index.html">HOME</a> >> LOCATIONS
+                </div>
+            </section>
+            <!-- Locations -->
+            <section class="p-8 m-4 mb-[-60px]">
+                <h1 class="text-center text-4xl md:text-5xl p-4 align-center">LOCATIONS</h1>
+                <div class="w-16 border-b-2 border-black mx-auto my-2"></div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 mt-8">
+                    <div class="bg-[#e4e7eb] p-4 rounded-lg">
+                        <img class="mb-4" src="./img/locations/AzamgharUp.png" alt="azamghar">
+                        <p>Azamghar UP</p>
+                        <p class="text-sm font-bold text-gray-500">Address: <span></span>
+                        Address: Zafar Complex, Main Road, Lal Ganj, Azamgarh - 276202 (Near Tehsil).</p>
+                    </div>
+                    <div class="bg-[#e4e7eb] p-4 rounded-lg">
+                        <img class="mb-4" src="./img/locations/Bhiwandi.png" alt="bhiwandi">
+                        <p>Bhiwandi</p>
+                        <p class="text-sm font-bold text-gray-500">Address: <span></span>
+                        Address: Millat Nagar, Road Number 4, Nashik Rd, Bhiwandi, Maharashtra 421302.</p>
+                    </div>
+                    <div class="bg-[#e4e7eb] p-4 rounded-lg">
+                        <img class="mb-4" src="./img/locations/Panvel.png" alt="panvel">
+                        <p>Panvel</p>
+                        <p class="text-sm font-bold text-gray-500">Address: <span></span>
+                        Shop No 04, Natyagrah Complex, Vasudeva Phadke Hall, opp. Saraswati Vidya Mandir School, Old Panvel, Navi Mumbai,
+                        Maharashtra 410206</p>
+                    </div>
+                    <div class="bg-[#e4e7eb] p-4 rounded-lg">
+                        <img class="mb-4" src="./img/locations/Kharghar.png" alt="kharghar">
+                        <p>Kharghar</p>
+                        <p class="text-sm font-bold text-gray-500">Address: <span></span>
+                        Plot No. D, Co-op. Society, Shree Krishna Paradise Cooperative Housing Society, Shop No. 29, 69, Sector 12, Kharghar,
+                        Navi Mumbai, Maharashtra 410210</p>
+                    </div>
+                    <div class="bg-[#e4e7eb] p-4 rounded-lg">
+                        <img class="mb-4" src="./img/locations/Mumbra.png" alt="mumbra">
+                        <p>Mumbra</p>
+                        <p class="text-sm font-bold text-gray-500">Address: <span></span>
+                        Shop No. 1 & 2, Quality Heights Near Shilphata, Mumbra, Thane, Maharashtra 400612.</p>
+                    </div>
+                    <div class="bg-[#e4e7eb] p-4 rounded-lg">
+                        <img class="mb-4" src="./img/locations/Santacruz.png" alt="santacruz">
+                        <p>Santacruz</p>
+                        <p class="text-sm font-bold text-gray-500">Address: <span></span>
+                        Shop No.1, Gr. Floor, Sunanda Apartment, 400 054, Juhu Tara Rd, opposite Mayur Hotel, Hasmukh Nagar, Santacruz West,
+                        Mumbai, Maharashtra 400054.</p>
+                    </div>
+                </div>
+            </section>
+
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 260">
+                <path fill="#e4e7eb" fill-opacity="1"
+                    d="M0,64L48,80C96,96,192,128,288,144C384,160,480,160,576,176C672,192,768,224,864,224C960,224,1056,192,1152,192C1248,192,1344,224,1392,240L1440,256L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z">
+                </path>
+            </svg>
+            <footer class="bg-beige text-black p-6 text-center bg-[#e4e7eb]">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 m-12">
+                    <div>
+                        <h2 class="font-bold mb-2">CONTACT US</h2>
+                        <p><i class="fas fa-phone"></i> +91-9324566332</p>
+                        <p><i class="fas fa-envelope"></i> ajwahod@gmail.com</p>
+                    </div>
+                    <div>
+                        <h2 class="font-bold mb-2">INFORMATION</h2>
+                        <ul>
+                            <a href="./about.html">
+                                <li>About Us</li>
+                            </a>
+                            <a href="./products.html">
+                                <li>Our Products</li>
+                            </a>
+                            <a href="./blogs.html">
+                                <li>Blogs</li>
+                            </a>
+                        </ul>
+                    </div>
+                    <div>
+                        <h2 class="font-bold mb-2">SOCIAL MEDIA</h2>
+                        <a href="https://www.instagram.com/ajwahouseofdryfruits_official?igsh=MTE1d3ZmYXNyYWxkdQ%3D%3D">
+                            <p><i class="fab fa-instagram"></i> Instagram</p>
+                        </a>
+                    </div>
+                    <div>
+                        <h2 class="font-bold mb-2">CUSTOMER SERVICE</h2>
+                        <ul>
+                            <a href="./contact.html">
+                                <li>Contact Us</li>
+                            </a>
+                            <a href="./locations.html">
+                                <li>Locations</li>
+                            </a>
+                        </ul>
+                    </div>
+                </div>
+                <div class="mt-6">
+                    <p>Powered By RV NETWORKING - 2024</p>
+                </div>
+            </footer>
+        </article>
+    </main>
+    <script src="./script.js"></script>
+</body>
+
+</html>

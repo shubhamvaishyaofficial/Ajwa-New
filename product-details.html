@@ -1,0 +1,640 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Commerce</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+</head>
+
+<body class="font-serif bg-[#D2B48C]">
+    <!-- Navbar -->
+    <nav class="sticky top-0 z-50 flex items-center justify-between flex-wrap bg-[#f3f4f6] p-6">
+        <div class="flex items-center flex-shrink-0 text-[#d1b48c] mr-6">
+            <img src="./img/logo.png" alt="logo" class="ml-8 w-40 mr-2">
+        </div>
+        <div class="block lg:hidden">
+            <button id="menu-button"
+                class="flex items-center px-3 py-2 border rounded text-black border-[#d1b48c] hover:text-[#d1b48c] hover:border-[#d1b48c]">
+                <svg id="menu-icon" class="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                    <title>Menu</title>
+                    <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v15z" />
+                </svg>
+            </button>
+        </div>
+        <div id="menu" class="w-full block flex-grow lg:flex lg:items-center lg:w-auto hidden lg:justify-end space-x-4">
+            <div class="text-sm lg:flex-grow lg:flex lg:justify-end space-x-8">
+                <a href="./index.html" class="block mt-4 lg:inline-block lg:mt-0 text-black hover:text-[#d1b48c] ml-8">
+                    HOME
+                </a>
+                <a href="./about.html" class="block mt-4 lg:inline-block lg:mt-0 text-black hover:text-[#d1b48c] mr-4">
+                    ABOUT
+                </a>
+                <a href="./products.html"
+                    class="active relative block mt-4 lg:inline-block lg:mt-0 text-[#d1b48c] hover:text-[#d1b48c] mr-4">
+                    <div class="flex items-center">
+                        <span>PRODUCTS</span>
+                    </div>
+                </a>
+                <a href="./blogs.html" class="block mt-4 lg:inline-block lg:mt-0 text-black hover:text-[#d1b48c] mr-4">
+                    BLOGS
+                </a>
+                <a href="./contact.html" class="block mt-4 lg:inline-block lg:mt-0 text-black hover:text-[#d1b48c] mr-4">
+                    CONTACT
+                </a>
+                <a href="./locations.html" class="block mt-4 lg:inline-block lg:mt-0 text-black hover:text-[#62acb4] mr-4">
+                    LOCATIONS
+                </a>
+            </div>
+            <!-- <div>
+                            <a href="./cart.html" class="block mt-4 lg:inline-block lg:mt-0 text-black hover:bg-[#d1b48c] ml-4 w-8">
+                                <img src="./img/cart.png">
+                            </a>
+                        </div> -->
+        </div>
+    </nav>
+
+    <main>
+        <article>
+            <!-- Preloader -->
+            <div id="preloader"
+                class="fixed bg-[#D2B48C] z-50 top-0 left-0 w-full h-full flex flex-col justify-center items-center">
+                <div class="relative pb-4">
+                    <div class="animate-spin rounded-full h-32 w-32 border-t-2 border-b-2 border-[#f3f4f6] absolute">
+                    </div>
+                    <img src="./img/preloader.gif" alt="Fruit Cartoon Animation" class="w-32 h-32 object-cover">
+                </div>
+                <h2 class="text-6xl text-[#f3f4f6] font-bold mb-4">
+                    <span class="loader_text inline-block animate-opacityScale delay-100">A</span>
+                    <span class="loader_text inline-block animate-opacityScale delay-200">J</span>
+                    <span class="loader_text inline-block animate-opacityScale delay-300">W</span>
+                    <span class="loader_text inline-block animate-opacityScale delay-400">A</span>
+                </h2>
+            </div>
+            <section class="relative">
+                <img src="./img/banner.jpg" alt="">
+                <div
+                    class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white text-2xl md:text-4xl lg:text-5xl font-bold">
+                    <a class="text-black hover:text-white" href="./index.html">PRODUCTS</a> >> <span id="productName"></span>
+                </div>
+            </section>
+            <section class="m-12 p-4 bg-gray-200 rounded shadow-lg">
+                <div id="app" x-data="productDetailsData" class="container">
+                    <div class="flex flex-col md:flex-row p-4 rounded">
+                        <div class="w-full md:w-1/2 p-8 rounded flex items-center justify-center">
+                            <div class="aspect-w-16 aspect-h-12">
+                                <img class="object-cover object-center rounded lg:max-h-96" x-bind:src="product.img"
+                                    x-bind:alt="product.name">
+                            </div>
+                        </div>
+                        <div class="flex flex-col w-full md:w-1/2 mt-4 md:mt-0 md:pl-8 py-8 text-left">
+                            <h1 class="sm:text-4xl text-2xl text-center font-medium title-font mb-2 text-gray-900 pt-4 px-8"
+                                x-text="product.name"></h1>
+                            <div class="w-16 border-b-2 border-black mx-auto my-2"></div>
+                            <p class="mx-auto leading-relaxed text-lg text-gray-700 pt-4 px-8"
+                                x-text="product.description"></p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="mb-8" x-data="productDetailsData" x-init="fetchProductDetails()">
+                <h1 class="text-2xl pt-8 px-2 pl-[4em]">Related Products:</h1>
+                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 px-8 m-8">
+                    <!-- Iterate through related products of the current main product -->
+                    <template x-for="(relatedProduct, index) in product.related" :key="index">
+                        <div class="related-product bg-[#e4e7eb] p-4 rounded-lg"
+                            @click="redirectToProductDetails(relatedProduct.id)">
+                            <img :src="relatedProduct.image" :alt="relatedProduct.name" class="lg:p-10">
+                            <p class="pt-4" x-text="relatedProduct.name"></p>
+                        </div>
+                    </template>
+                </div>
+            </section>
+            <!-- Pagination Section -->
+            <!-- <div class="flex items-center justify-center">
+                <button @click="currentIndex = Math.max(currentIndex - 1, 0)"
+                    class="w-12 h-12 rounded-full mr-2 bg-[#e4e7eb] text-xl text-center">
+                    <span class="text-lg">&lt;</span>
+                </button>
+                <button @click="currentIndex = Math.min(currentIndex + 1, products.length - 1)"
+                    class="w-12 h-12 rounded-full bg-[#e4e7eb] text-xl text-center">
+                    <span class="text-lg">&gt;</span>
+                </button>
+            </div> -->
+            <script src="https://cdn.jsdelivr.net/npm/alpinejs@2.8.2/dist/alpine.min.js"
+                integrity="sha256-Cf3Lv7u5sRQ8toUa0L4PV4B8IG/9G2xVRUN2s5EADyM=" crossorigin="anonymous"></script>
+            <script>
+                const productDetailsData = {
+                        product: {},
+                        fetchProductDetails() {
+                            // Parse the product ID from the URL
+                            const urlParams = new URLSearchParams(window.location.search);
+                            const productId = urlParams.get('id');
+
+                            // Find the product with the corresponding ID
+                            for (const product of this.products) {
+                                if (product.id == productId) {
+                                    this.product = product;
+                                    break;
+                                }
+                            }
+                        },
+                    findRelated(product) {
+                    },
+                    redirectToProductDetails(productId) {
+                        window.location.href = `product-details.html?id=${productId}`;
+                    },
+                    products: [
+                        {
+                            id: 1,
+                            img: './img/products/cashew.png',
+                            name: 'CASHEWS',
+                            description: 'Discover the epitome of nutty luxury with AJWA\'s Cashews. We\'ve masterfully sorted each cashew to a pearl perfection, unlocking their rich, buttery flavor.',
+                            related: [
+                                {
+                                    id: 5,
+                                    name: 'ALMONDS',
+                                    image: './img/products/almond.png',
+                                },
+                                {
+                                    id:4,
+                                    name: 'DATES',
+                                    image: './img/products/dates.png',
+                                },
+                                {
+                                    id:2,
+                                    name: 'RASINS',
+                                    image: './img/products/rasins.png',
+                                },
+                                {
+                                    id:7,
+                                    name: 'PISTACHIO',
+                                    image: './img/products/pistachio.png',
+                                },
+                            ]
+                        },
+                        {
+                            id: 2,
+                            img: './img/products/Rasins.png',
+                            name: 'RASINS',
+                            description: 'RaisinNature\'s Sweet Gems, Ready to Elevate Your Day.Our carefully selected, plump raisins are naturally sweet, bursting with rich flavor.A healthy and delicious addition to your routine,',
+                            related: [
+                                {
+                                    id: 5,
+                                    name: 'ALMONDS',
+                                    image: './img/products/almond.png',
+                                },
+                                {
+                                    id:4,
+                                    name: 'DATES',
+                                    image: './img/products/dates.png',
+                                },
+                                {
+                                    id: 2,
+                                    name: 'RASINS',
+                                    image: './img/products/cashew.png',
+                                },
+                                {
+                                    id: 7,
+                                    name: 'PISTACHIO',
+                                    image: './img/products/pistachio.png',
+                                },
+                            ]
+                        },
+                        {
+                            id: 3,
+                            img: './img/products/makhana.png',
+                            name: 'MAKHANA',
+                            description: 'Indulge in the irresistible charm of AJWA\'s Makhana, where each nut is a symphony of taste and texture.Savor the perfect crunch delight in every bite.',
+                            related: [
+                                {
+                                    id: 5,
+                                    name: 'ALMONDS',
+                                    image: './img/products/almond.png',
+                                },
+                                {
+                                    id: 4,
+                                    name: 'DATES',
+                                    image: './img/products/dates.png',
+                                },
+                                {
+                                    id: 2,
+                                    name: 'RASINS',
+                                    image: './img/products/rasins.png',
+                                },
+                                {
+                                    id: 7,
+                                    name: 'PISTACHIO',
+                                    image: './img/products/pistachio.png',
+                                },
+                            ]
+                        },
+                        {
+                            id: 4,
+                            img: './img/products/dates.png',
+                            name: 'DATES',
+                            description: 'A paragon of natural sweetness. Harvested with care, our dates offer impeccable taste, rich heritage, and a healthy indulgence for discerning connoisseurs. AJWA Dates are nature\'s gift of perfection.Handpicked for quality and taste, our dates exude timeless elegance, embodying health and exquisite flavour for the discerning palate.',
+                            related: [
+                                {
+                                    id: 5,
+                                    name: 'ALMONDS',
+                                    image: './img/products/almond.png',
+                                },
+                                {
+                                    id: 4,
+                                    name: 'DATES',
+                                    image: './img/products/dates.png',
+                                },
+                                {
+                                    id: 2,
+                                    name: 'RASINS',
+                                    image: './img/products/rasins.png',
+                                },
+                                {
+                                    id: 7,
+                                    name: 'PISTACHIO',
+                                    image: './img/products/pistachio.png',
+                                },
+                            ]
+                        },
+                        {
+                            id: 5,
+                            img: './img/products/almond.png',
+                            name: 'ALMONDS',
+                            description: 'Indulge in the irresistible charm of AJWA\'s  Almonds, where each nut is a symphony of taste and texture.Savor the perfect crunch, meticulously crafted to perfection, and experience pure nutty delight in every bite.',
+                            related: [
+                                {
+                                    id: 1,
+                                    name: 'CASHEWS',
+                                    image: './img/products/cashew.png',
+                                },
+                                {
+                                    id: 4,
+                                    name: 'DATES',
+                                    image: './img/products/dates.png',
+                                },
+                                {
+                                    id: 2,
+                                    name: 'RASINS',
+                                    image: './img/products/rasins.png',
+                                },
+                                {
+                                    id: 7,
+                                    name: 'PISTACHIO',
+                                    image: './img/products/pistachio.png',
+                                },
+                            ]
+                        },
+
+                        {
+                            id: 6,
+                            img: './img/products/honey.png',
+                            name: 'HONEY',
+                            description: 'Ajwa offers exquisite honey, sourced from premium apiaries, blending purity with unparalleled flavour. Our honey is a golden elixir, meticulously harvested from the finest blossoms. Rich in antioxidants and nutrients, Ajwa\'s honey delivers a luscious sweetness that encapsulates nature\'s goodness. Elevate your culinary experience with Ajwa\s pure and delectable honey.',
+                            related: [
+                                {
+                                    id: 1,
+                                    name: 'CASHEWS',
+                                    image: './img/products/cashew.png',
+                                },
+                                {
+                                    id: 4,
+                                    name: 'DATES',
+                                    image: './img/products/dates.png',
+                                },
+                                {
+                                    id: 2,
+                                    name: 'RASINS',
+                                    image: './img/products/rasins.png',
+                                },
+                                {
+                                    id: 7,
+                                    name: 'PISTACHIO',
+                                    image: './img/products/pistachio.png',
+                                },
+                            ]
+                        },
+                        {
+                            id: 7,
+                            img: './img/products/Pistachio.png',
+                            name: 'PISTACHIO',
+                            description: 'Salty, Savory, and Simply Irresistible. We\'ve taken the finest pistachios, expertly roasted them, and lightly salted to perfection.Each bite is a flavorful journey that will keep you coming back for more.',
+                            related: [
+                                {
+                                    id: 1,
+                                    name: 'CASHEWS',
+                                    image: './img/products/cashew.png',
+                                },
+                                {
+                                    id: 4,
+                                    name: 'DATES',
+                                    image: './img/products/dates.png',
+                                },
+                                {
+                                    id: 2,
+                                    name: 'RASINS',
+                                    image: './img/products/rasins.png',
+                                },
+                                {
+                                    id: 7,
+                                    name: 'PISTACHIO',
+                                    image: './img/products/makhana.png',
+                                },
+                            ]
+                        },
+                        {
+                            id: 8,
+                            img: './img/products/sweets.png',
+                            name: 'SWEETS',
+                            description: 'A symbol of confectionery mastery. Our exquisite treats, crafted with precision and premium ingredients, deliver pure sweetness and elevate your moments with indulgent luxury. Meticulously handcrafted with the finest ingredients, our sweets promise a delightful blend of tradition and exquisite flavour.',
+                            related: [
+                                {
+                                    id: 10,
+                                    name: 'COOKIES',
+                                    image: './img/products/cookies.png',
+                                },
+                                {
+                                    id: 4,
+                                    name: 'DATES',
+                                    image: './img/products/dates.png',
+                                },
+                                {
+                                    id: 2,
+                                    name: 'RASINS',
+                                    image: './img/products/rasins.png',
+                                },
+                                {
+                                    id: 6,
+                                    name: 'HONEY',
+                                    image: './img/products/honey.png',
+                                },
+                            ]
+                        },
+
+                        {
+                            id: 9,
+                            img: './img/products/spices.png',
+                            name: ' SPICES',
+                            description: 'A trusted name in quality ingredients. Elevate your culinary creations with our premium selection, ensuring the finest flavours and culinary excellence. Our premium selection adds depth and flavour to your dishes, making every meal a masterpiece.',
+                            related: [
+                                {
+                                    id: 11,
+                                    name: 'COLD DRINKS',
+                                    image: './img/products/coldrink.png',
+                                },
+                                {
+                                    id: 4,
+                                    name: 'DATES',
+                                    image: './img/products/dates.png',
+                                },
+                                {
+                                    id: 2,
+                                    name: 'RASINS',
+                                    image: './img/products/rasins.png',
+                                },
+                                {
+                                    id: 7,
+                                    name: 'PISTACHIO',
+                                    image: './img/products/pistachio.png',
+                                },
+                            ]
+                        },
+
+                        {
+                            id: 10,
+                            img: './img/products/cookies.png',
+                            name: 'COOKIES',
+                            description: 'Ajwa\'s Bakery offers a delectable array of freshly baked goods, from mouthwatering pastries to artisanal breads.Every item is crafted with passion and precision, ensuring a delightful experience for every customer.With a commitment to quality, Ajwa\'s Bakery brings a symphony of flavours to satisfy diverse palates, leaving patrons craving more.',
+                            related: [
+                                {
+                                    id: 1,
+                                    name: 'CASHEWS',
+                                    image: './img/products/cashew.png',
+                                },
+                                {
+                                    id: 11,
+                                    name: 'COLD DRINKS',
+                                    image: './img/products/coldrink.png',
+                                },
+                                {
+                                    id: 2,
+                                    name: 'RASINS',
+                                    image: './img/products/rasins.png',
+                                },
+                                {
+                                    id: 7,
+                                    name: 'PISTACHIO',
+                                    image: './img/products/pistachio.png',
+                                },
+
+                            ]
+                        },
+                        {
+                            id: 11,
+                            img: './img/products/coldrink.png',
+                            name: 'COLD DRINKS',
+                            description: 'Ajwa presents a refreshing array of cold drinks that captivate the taste buds with their delightful flavors. From fruity concoctions bursting with tropical goodness to classic sodas and chilled beverages, each sip is a journey into cool, satisfying refreshment. Elevate your thirst-quenching experience with Ajwa\'s diverse and invigorating cold drink selection.',
+                            related: [
+                                {
+                                    id: 1,
+                                    name: 'CASHEWS',
+                                    image: './img/products/cashew.png',
+                                },
+                                {
+                                    id: 4,
+                                    name: 'DATES',
+                                    image: './img/products/dates.png',
+                                },
+                                {
+                                    id: 2,
+                                    name: 'RASINS',
+                                    image: './img/products/rasins.png',
+                                },
+                                {
+                                    id: 7,
+                                    name: 'PISTACHIO',
+                                    image: './img/products/pistachio.png',
+                                },
+                            ]
+                        },
+                        {
+                            id: 12,
+                            img: './img/products/gifts.png',
+                            name: 'GIFTS',
+                            description: 'Ajwa offers exquisite gift packs that blend luxury and taste. Our curated selection features premium dates, rich in flavour and nutrition. Each pack is a perfect fusion of tradition and sophistication, making it an ideal gift for any occasion. Elevate your gifting experience with Ajwa\'s signature collection of indulgent date varieties.',
+                            related: [
+                                {
+                                    id: 11,
+                                    name: 'COLD DRINKS',
+                                    image: './img/products/coldrink.png',
+                                },
+                                {
+                                    id: 4,
+                                    name: 'DATES',
+                                    image: './img/products/dates.png',
+                                },
+                                {
+                                    id: 2,
+                                    name: 'RASINS',
+                                    image: './img/products/rasins.png',
+                                },
+                                {
+                                    id: 7,
+                                    name: 'PISTACHIO',
+                                    image: './img/products/pistachio.png',
+                                },
+                            ]
+                        },
+                        {
+                            id: 13,
+                            img: './img/products/driedFruits.png',
+                            name: 'DRIED FRUITS',
+                            description: 'A hallmark of exquisite snacking. Carefully sourced and preserved for optimal flavour and nutrition, our selection defines premium quality and healthy indulgence. Handpicked and carefully preserved, these dried fruits embody natural sweetness and superior quality.',
+                            related: [
+                                {
+                                    id: 11,
+                                    name: 'COLD DRINKS',
+                                    image: './img/products/coldrink.png',
+                                },
+                                {
+                                    id: 4,
+                                    name: 'DATES',
+                                    image: './img/products/dates.png',
+                                },
+                                {
+                                    id: 2,
+                                    name: 'RASINS',
+                                    image: './img/products/rasins.png',
+                                },
+                                {
+                                    id: 7,
+                                    name: 'PISTACHIO',
+                                    image: './img/products/pistachio.png',
+                                },
+                            ]
+                        },
+                        {
+                            id: 14,
+                            img: './img/products/dryFruits.png',
+                            name: 'DRY FRUITS',
+                            description: 'A testament to premium snacking. Carefully selected and packaged, our premium offerings embody superior quality and exceptional flavour.  Our selection is meticulously sourced and thoughtfully packaged and delivers unparalleled quality, health benefits, and exquisite taste.',
+                            related: [
+                                {
+                                    id: 11,
+                                    name: 'COLD DRINKS',
+                                    image: './img/products/coldrink.png',
+                                },
+                                {
+                                    id: 4,
+                                    name: 'DATES',
+                                    image: './img/products/dates.png',
+                                },
+                                {
+                                    id: 2,
+                                    name: 'RASINS',
+                                    image: './img/products/rasins.png',
+                                },
+                                {
+                                    id: 7,
+                                    name: 'PISTACHIO',
+                                    image: './img/products/pistachio.png',
+                                },
+                            ]
+                        },
+                        {
+                            id: 15,
+                            img: './img/products/chocolates.png',
+                            name: 'CHOCOLATES',
+                            description: 'A hallmark of excellence in confectionery. Meticulously crafted from the finest ingredients, our chocolates promise pure delight and a taste of luxury in every bite. Crafted with precision and the finest ingredients, our chocolates embody luxury, sophistication, and unparalleled taste.',
+                            related: [
+                                {
+                                    id: 11,
+                                    name: 'COLD DRINKS',
+                                    image: './img/products/coldrink.png',
+                                },
+                                {
+                                    id: 4,
+                                    name: 'DATES',
+                                    image: './img/products/dates.png',
+                                },
+                                {
+                                    id: 2,
+                                    name: 'RASINS',
+                                    image: './img/products/rasins.png',
+                                },
+                                {
+                                    id: 7,
+                                    name: 'PISTACHIO',
+                                    image: './img/products/pistachio.png',
+                                },
+                            ]
+                        },
+                    ],
+
+                };
+                    productDetailsData.fetchProductDetails();
+                    document.getElementById('productName').textContent = productDetailsData.product.name;
+                    window.productDetailsData = productDetailsData;
+            </script>
+
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 260">
+                <path fill="#e4e7eb" fill-opacity="1"
+                    d="M0,64L48,80C96,96,192,128,288,144C384,160,480,160,576,176C672,192,768,224,864,224C960,224,1056,192,1152,192C1248,192,1344,224,1392,240L1440,256L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z">
+                </path>
+            </svg>
+            <footer class="bg-beige text-black p-6 text-center bg-[#e4e7eb]">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 m-12">
+                    <div>
+                        <h2 class="font-bold mb-2">CONTACT US</h2>
+                        <p><i class="fas fa-phone"></i> +91-9324566332</p>
+                        <p><i class="fas fa-envelope"></i> ajwahod@gmail.com</p>
+                    </div>
+                    <div>
+                        <h2 class="font-bold mb-2">INFORMATION</h2>
+                        <ul>
+                            <a href="./about.html">
+                                <li>About Us</li>
+                            </a>
+                            <a href="./products.html">
+                                <li>Our Products</li>
+                            </a>
+                            <a href="./blogs.html">
+                                <li>Blogs</li>
+                            </a>
+                        </ul>
+                    </div>
+                    <div>
+                        <h2 class="font-bold mb-2">SOCIAL MEDIA</h2>
+                        <a href="https://www.instagram.com/ajwahouseofdryfruits_official?igsh=MTE1d3ZmYXNyYWxkdQ%3D%3D">
+                            <p><i class="fab fa-instagram"></i> Instagram</p>
+                        </a>
+                    </div>
+                    <div>
+                        <h2 class="font-bold mb-2">CUSTOMER SERVICE</h2>
+                        <ul>
+                            <a href="./contact.html">
+                                <li>Contact Us</li>
+                            </a>
+                            <a href="./locations.html">
+                                <li>Locations</li>
+                            </a>
+                        </ul>
+                    </div>
+                </div>
+                <div class="mt-6">
+                    <p>Powered By RV NETWORKING - 2024</p>
+                </div>
+            </footer>
+        </article>
+    </main>
+    <script src="./script.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+</body>
+
+</html>

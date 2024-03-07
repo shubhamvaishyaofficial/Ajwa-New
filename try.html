@@ -1,0 +1,1761 @@
+<!-- CARDS CODE -->
+<!-- 
+    <div class="grid grid-cols-4 gap-4 p-8">
+                    <div class="bg-gray-100 p-4 rounded-lg">
+                        <img src="./img/homebg3.jpg" alt="Petticoat">
+                        <p>Ladies Wear</p>
+                        <span class="text-sm text-gray-500">$20</span>
+                    </div>
+                    <div class="bg-gray-100 p-4 rounded-lg">
+                        <img src="./img/homebg3.jpg" alt="Petticoat">
+                        <p>Girls Jacket</p>
+                        <span class="text-sm text-gray-500">$20</span>
+                    </div>
+                    <div class="bg-gray-100 p-4 rounded-lg">
+                        <img src="./img/homebg3.jpg" alt="Petticoat">
+                        <p>Designer Blouse</p>
+                        <span class="text-sm text-gray-500">$20</span>
+                    </div>
+                    <div class="bg-gray-100 p-4 rounded-lg">
+                        <img src="./img/homebg3.jpg" alt="Petticoat">
+                        <p>Ladies Panty</p>
+                        <span class="text-sm text-gray-500">$20</span>
+                    </div>
+                    <div class="bg-gray-100 p-4 rounded-lg">
+                        <img src="./img/homebg3.jpg" alt="Petticoat">
+                        <p>Ladies Salwar Suit</p>
+                        <span class="text-sm text-gray-500">$20</span>
+                    </div>
+                    <div class="bg-gray-100 p-4 rounded-lg">
+                        <img src="./img/homebg3.jpg" alt="Petticoat">
+                        <p>Ladies Shirt</p>
+                        <span class="text-sm text-gray-500">$20</span>
+                    </div>
+                    <div class="bg-gray-100 p-4 rounded-lg">
+                        <img src="./img/homebg3.jpg" alt="Petticoat">
+                        <p>Petticoat</p>
+                        <span class="text-sm text-gray-500">$20</span>
+                    </div>
+                    <div class="bg-gray-100 p-4 rounded-lg">
+                        <img src="./img/homebg3.jpg" alt="Petticoat">
+                        <p>Jacket</p>
+                        <span class="text-sm text-gray-500">$20</span>
+                    </div>
+                </div>
+ -->
+<!-- 
+    Product Details Section
+    <section class="m-8 p-4 bg-gray-200 rounded shadow-lg" x-data="{ quantity: 1, price: 100 }">
+                <div class="flex flex-col md:flex-row bg-gray-200 p-4 rounded">
+                    <div class="w-full md:w-1/2 p-8 rounded">
+                        <img class="object-cover object-center rounded w-full h-64 md:h-auto" alt="hero"
+                            src="./img/homebg3.jpg">
+                    </div>
+                    <div class="flex flex-col w-full md:w-1/2 mt-4 md:mt-0 md:pl-8 py-8 text-left">
+                        <h1 class="sm:text-4xl text-2xl text-center font-medium title-font mb-2 text-gray-900 pt-4 px-8">
+                            Tomato</h1>
+                        <div class="w-16 border-b-2 border-black mx-auto my-2"></div>
+                        <p class="lg:w-2/3 mx-auto leading-relaxed text-lg text-gray-700 pt-4">Fresh and high-quality
+                            tomatoes straight
+                            from our farm to your kitchen.</p>
+                        <p class="lg:w-2/3 mx-auto leading-relaxed text-lg text-gray-700 pt-4">Price: ₹ <span
+                                x-text="price * quantity"></span></p>
+                        <div class="lg:w-2/3 mx-auto my-4">
+                            <label for="quantity" class="text-lg">Quantity (in kg):</label>
+                            <input type="number" id="quantity" name="quantity" min="1" max="100" step="1"
+                                x-model="quantity" class="text-lg p-1">
+                        </div>
+                        <div class="lg:w-2/3 mx-auto my-4">
+                            <button
+                                class="bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded text-lg">Buy
+                                Now</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+ -->
+
+container mx-auto bg-[#f3f4f6] w-full rounded-md shadow-md p-8 m-8 relative
+
+https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d15091.779606431786!2d72.83972014999999!3d18.9780406!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sin!4v1707680117662!5m2!1sen!2sin
+
+<nav x-data="{ scrollDirection: '', lastScroll: 0 }"
+    x-on:scroll.window="scrollDirection = ($event.target.documentElement.scrollTop > lastScroll) ? 'down' : 'up'; lastScroll = $event.target.documentElement.scrollTop;"
+    class="sticky top-0 z-50 flex items-center justify-between flex-wrap bg-[#f3f4f6] p-6"
+    :class="{'hidden': scrollDirection === 'up'}">
+    <!-- Your navbar content -->
+</nav>
+
+<section class="m-8 p-8 bg-white rounded shadow-lg">
+    <div class="flex flex-col md:flex-row items-center justify-center bg-[#f3f4f6] p-4 rounded">
+        <div class="w-full md:w-1/2">
+            <img class="object-cover object-center rounded w-full h-64 md:h-auto" alt="hero" src="./img/logo.png">
+        </div>
+        <div class="flex flex-col text-center w-full md:w-1/2 mt-4 md:mt-0 md:pl-8">
+            <h1 class="sm:text-3xl text-2xl font-medium title-font mb-2 text-gray-900">About Us</h1>
+            <div class="w-16 border-b-2 border-black mx-auto my-2"></div>
+            <p class="lg:w-2/3 mx-auto leading-relaxed text-base text-gray-700">We are a dedicated team
+                committed to
+                providing you with the freshest and highest quality grocery products. Our mission is to make
+                grocery
+                shopping easy, efficient, and enjoyable.</p>
+        </div>
+    </div>
+</section>
+
+<section class="m-8 p-8 bg-white rounded shadow-lg">
+    <div class="flex flex-col md:flex-row items-center justify-center bg-[#f3f4f6] p-4 rounded">
+        <div x-data="{ currentIndex: 0, images: ['./img/logo.png', './img/homebg3.jpg', './img/homebg2.jpg'] }"
+            class="w-full md:w-1/2">
+            <template x-for="(img, index) in images" :key="index">
+                <img x-show="currentIndex === index" :src="img"
+                    class="object-cover object-center rounded w-full h-64 md:h-auto transition ease-in-out duration-200"
+                    alt="Image">
+            </template>
+            <div class="flex justify-center mt-4">
+                <button @click="currentIndex = 0"
+                    :class="{ 'bg-gray-400': currentIndex !== 0, 'bg-black': currentIndex === 0 }"
+                    class="w-3 h-3 rounded-full mr-2"></button>
+                <button @click="currentIndex = 1"
+                    :class="{ 'bg-gray-400': currentIndex !== 1, 'bg-black': currentIndex === 1 }"
+                    class="w-3 h-3 rounded-full mr-2"></button>
+                <button @click="currentIndex = 2"
+                    :class="{ 'bg-gray-400': currentIndex !== 2, 'bg-black': currentIndex === 2 }"
+                    class="w-3 h-3 rounded-full"></button>
+            </div>
+        </div>
+        <div class="flex flex-col text-center w-full md:w-1/2 mt-4 md:mt-0 md:pl-8">
+            <h1 class="sm:text-3xl text-2xl font-medium title-font mb-2 text-gray-900">About Us</h1>
+            <div class="w-16 border-b-2 border-black mx-auto my-2"></div>
+            <p class="lg:w-2/3 mx-auto leading-relaxed text-base text-gray-700">We are a dedicated team
+                committed to
+                providing you with the freshest and highest quality grocery products. Our mission is to make
+                grocery
+                shopping easy, efficient, and enjoyable.</p>
+        </div>
+    </div>
+</section>
+
+<h1 class="text-center text-4xl md:text-5xl p-4 align-center">Testimonials</h1>
+<div class="w-16 border-b-2 border-black mx-auto my-2"></div>
+
+<section class="m-8 p-4 bg-black rounded shadow-lg">
+    <div class="flex flex-col md:flex-row bg-[#f3f4f6] p-4 rounded">
+        <div class="w-full md:w-1/2 p-4 rounded">
+            <img class="object-cover object-center rounded w-full h-64 md:h-auto" alt="hero" src="./img/homebg1.jpg">
+        </div>
+        <div class="flex flex-col w-full md:w-1/2 mt-4 md:mt-0 md:pl-8 py-8 ">
+            <h1 class="sm:text-3xl text-2xl text-center font-medium title-font mb-2 text-gray-900 px-8">Tomato</h1>
+            <div class="w-16 border-b-2 border-black mx-auto my-2"></div>
+            <p class="lg:w-2/3 mx-auto leading-relaxed text-base text-gray-700">Fresh and high-quality tomatoes straight
+                from
+                our farm to your kitchen.</p>
+            <p class="lg:w-2/3 mx-auto leading-relaxed text-base text-gray-700">Price: <span id="price">₹100/kg</span>
+            </p>
+            <div class="lg:w-2/3 mx-auto my-4">
+                <label for="quantity">Quantity (in kg): </label>
+                <input type="number" id="quantity" name="quantity" min="1" max="100" step="1" value="1">
+            </div>
+            <div class="lg:w-2/3 mx-auto my-4">
+                <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Buy Now</button>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="flex flex-col w-full md:w-1/2 mt-4 md:mt-0 md:pl-8 py-8 ">
+    <h1 class="sm:text-3xl text-2xl text-center font-medium title-font mb-2 text-gray-900 px-8">Tomato</h1>
+    <div class="w-16 border-b-2 border-black mx-auto my-2"></div>
+    <p class="lg:w-2/3 mx-auto leading-relaxed text-base text-gray-700">Fresh and high-quality tomatoes straight
+        from
+        our farm to your kitchen.</p>
+    <p class="lg:w-2/3 mx-auto leading-relaxed text-base text-gray-700">Price: <span id="price">₹100/kg</span>
+    </p>
+    <div class="lg:w-2/3 mx-auto my-4">
+        <label for="quantity">Quantity (in kg): </label>
+        <input type="number" id="quantity" name="quantity" min="1" max="100" step="1" value="1">
+    </div>
+    <div class="lg:w-2/3 mx-auto my-4">
+        <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Buy Now</button>
+    </div>
+</div>
+
+<section>
+    <div x-show="showNewContent" x-transition:enter="transition ease-out duration-500"
+        x-transition:enter-start="transform opacity-0 scale-95" x-transition:enter-end="transform opacity-100 scale-100"
+        x-transition:leave="transition ease-in duration-500" x-transition:leave-start="transform opacity-100 scale-100"
+        x-transition:leave-end="transform opacity-0 scale-95">
+        <h1 class="text-2xl pt-8 px-2 pl-[4em]">Products related to this
+            item</h1>
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 px-8 m-8">
+            <div x-data @click="window.location.href = './tomato.html'"
+                class="bg-[#e4e7eb] p-4 rounded-lg hover:cursor-pointer">
+                <img src="./img/homebg3.jpg" alt="Petticoat">
+                <p class="pt-4">TOMATOS</p>
+                <span class="text-md text-gray-500">₹ 100</span>
+            </div>
+            <div x-data @click="window.location.href = './tomato.html'"
+                class="bg-[#e4e7eb] p-4 rounded-lg hover:cursor-pointer">
+                <img src="./img/homebg3.jpg" alt="Petticoat">
+                <p class="pt-4">TOMATOS</p>
+                <span class="text-md text-gray-500">₹ 100</span>
+            </div>
+            <div x-data @click="window.location.href = './tomato.html'"
+                class="bg-[#e4e7eb] p-4 rounded-lg hover:cursor-pointer">
+                <img src="./img/homebg3.jpg" alt="Petticoat">
+                <p class="pt-4">TOMATOS</p>
+                <span class="text-md text-gray-500">₹ 100</span>
+            </div>
+            <div x-data @click="window.location.href = './tomato.html'"
+                class="bg-[#e4e7eb] p-4 rounded-lg hover:cursor-pointer">
+                <img src="./img/homebg3.jpg" alt="Petticoat">
+                <p class="pt-4">TOMATOS</p>
+                <span class="text-md text-gray-500">₹ 100</span>
+            </div>
+            <button @click="activeSlide = activeSlide === 0 ? slides.length - 1 : activeSlide - 1">Left</button>
+            <button @click="activeSlide = activeSlide === slides.length - 1 ? 0 : activeSlide + 1">Right</button>
+        </div>
+    </div>
+</section>
+
+<section>
+    <div x-show="showNewContent" x-transition:enter="transition ease-out duration-500"
+        x-transition:enter-start="transform opacity-0 scale-95" x-transition:enter-end="transform opacity-100 scale-100"
+        x-transition:leave="transition ease-in duration-500" x-transition:leave-start="transform opacity-100 scale-100"
+        x-transition:leave-end="transform opacity-0 scale-95">
+        <h1 class="text-2xl pt-8 px-2 pl-[4em]">Products related to this
+            item</h1>
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 px-8 m-8">
+            <!-- first products -->
+            <div x-data @click="window.location.href = './tomato.html'"
+                class="bg-[#e4e7eb] p-4 rounded-lg hover:cursor-pointer">
+                <img src="./img/homebg3.jpg" alt="Petticoat">
+                <p class="pt-4">TOMATOS</p>
+                <span class="text-md text-gray-500">₹ 100</span>
+            </div>
+            <div x-data @click="window.location.href = './tomato.html'"
+                class="bg-[#e4e7eb] p-4 rounded-lg hover:cursor-pointer">
+                <img src="./img/homebg3.jpg" alt="Petticoat">
+                <p class="pt-4">TOMATOS</p>
+                <span class="text-md text-gray-500">₹ 100</span>
+            </div>
+            <div x-data @click="window.location.href = './tomato.html'"
+                class="bg-[#e4e7eb] p-4 rounded-lg hover:cursor-pointer">
+                <img src="./img/homebg3.jpg" alt="Petticoat">
+                <p class="pt-4">TOMATOS</p>
+                <span class="text-md text-gray-500">₹ 100</span>
+            </div>
+            <div x-data @click="window.location.href = './tomato.html'"
+                class="bg-[#e4e7eb] p-4 rounded-lg hover:cursor-pointer">
+                <img src="./img/homebg3.jpg" alt="Petticoat">
+                <p class="pt-4">TOMATOS</p>
+                <span class="text-md text-gray-500">₹ 100</span>
+            </div>
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 px-8 m-8">
+            <!-- second products -->
+            <div x-data @click="window.location.href = './tomato.html'"
+                class="bg-[#e4e7eb] p-4 rounded-lg hover:cursor-pointer">
+                <img src="./img/homebg3.jpg" alt="Petticoat">
+                <p class="pt-4">TOMATOS</p>
+                <span class="text-md text-gray-500">₹ 100</span>
+            </div>
+            <div x-data @click="window.location.href = './tomato.html'"
+                class="bg-[#e4e7eb] p-4 rounded-lg hover:cursor-pointer">
+                <img src="./img/homebg3.jpg" alt="Petticoat">
+                <p class="pt-4">TOMATOS</p>
+                <span class="text-md text-gray-500">₹ 100</span>
+            </div>
+            <div x-data @click="window.location.href = './tomato.html'"
+                class="bg-[#e4e7eb] p-4 rounded-lg hover:cursor-pointer">
+                <img src="./img/homebg3.jpg" alt="Petticoat">
+                <p class="pt-4">TOMATOS</p>
+                <span class="text-md text-gray-500">₹ 100</span>
+            </div>
+            <div x-data @click="window.location.href = './tomato.html'"
+                class="bg-[#e4e7eb] p-4 rounded-lg hover:cursor-pointer">
+                <img src="./img/homebg3.jpg" alt="Petticoat">
+                <p class="pt-4">TOMATOS</p>
+                <span class="text-md text-gray-500">₹ 100</span>
+            </div>
+        </div>
+        <div class="flex justify-center space-x-4 pb-4">
+            <button @click="activeSlide = activeSlide === 0 ? slides.length - 1 : activeSlide - 1"
+                class="w-12 h-12 bg-gray-200 hover:bg-gray-300 text-white font-bold rounded-full"> </button>
+            <button @click="activeSlide = activeSlide === slides.length - 1 ? 0 : activeSlide + 1"
+                class="w-12 h-12 bg-gray-200 hover:bg-gray-300 text-white font-bold rounded-full"></button>
+        </div>
+    </div>
+</section>
+
+<nav class="sticky top-0 z-50 flex items-center justify-between flex-wrap bg-[#e4e7eb] px-6 h-40 w-full">
+    <div class="flex items-center flex-shrink-0 text-[#62acb4] mr-6">
+        <img src="./img/logo.png" alt="logo" class="h-40 w-50 mr-2">
+    </div>
+    <div class="block lg:hidden">
+        <button id="menu-button"
+            class="flex items-center px-3 py-2 border rounded text-black border-[#62acb4] hover:text-[#62acb4] hover:border-[#62acb4]">
+            <svg id="menu-icon" class="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                <title>Menu</title>
+                <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v15z" />
+            </svg>
+        </button>
+    </div>
+    <div id="menu" class="w-full block flex-grow lg:flex lg:items-center lg:w-auto hidden lg:justify-end space-x-4">
+        <div class="text-sm lg:flex-grow lg:flex lg:justify-end space-x-8">
+            <a href="#home" class="block mt-4 lg:inline-block lg:mt-0 text-black hover:text-[#62acb4] ml-8">
+                HOME
+            </a>
+            <a href="./about.html" class="block mt-4 lg:inline-block lg:mt-0 text-black hover:text-[#62acb4] mr-4">
+                ABOUT
+            </a>
+            <a href="./products.html" class="block mt-4 lg:inline-block lg:mt-0 text-black hover:text-[#62acb4] mr-4">
+                PRODUCTS
+            </a>
+            <a href="./blogs.html" class="block mt-4 lg:inline-block lg:mt-0 text-black hover:text-[#62acb4] mr-4">
+                BLOGS
+            </a>
+            <a href="./contact.html" class="block mt-4 lg:inline-block lg:mt-0 text-black hover:text-[#62acb4] mr-4">
+                CONTACT
+            </a>
+            <a href="./locations.html" class="block mt-4 lg:inline-block lg:mt-0 text-black hover:text-[#62acb4] mr-4">
+                LOCATIONS
+            </a>
+        </div>
+        <!-- <div>
+                <a href="./cart.html" class="block mt-4 lg:inline-block lg:mt-0 text-black hover:bg-[#62acb4] ml-4 w-8">
+                    <img src="./img/cart.png">
+                </a>
+            </div> -->
+    </div>
+</nav>
+
+style="background-color:rgba(228, 231, 235,0.4);"
+
+<div x-show="tab === 'tab-1'" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 p-8">
+    <div x-data @click="window.location.href = './tomato.html'"
+        class="bg-[#e4e7eb] p-4 rounded-lg hover:cursor-pointer">
+        <img src="./img/products/almond.png" alt="almond">
+        <p class="pt-4">ALMONDS</p>
+    </div>
+    <div x-data @click="window.location.href = './tomato.html'"
+        class="bg-[#e4e7eb] p-4 rounded-lg hover:cursor-pointer">
+        <img src="./img/products/cashew.png" alt="cashew">
+        <p class="pt-4">CASHEWS</p>
+    </div>
+    <div x-data @click="window.location.href = './tomato.html'"
+        class="bg-[#e4e7eb] p-4 rounded-lg hover:cursor-pointer">
+        <img src="./img/products/Rasins.png" alt="Rasins">
+        <p class="pt-4">RASINS</p>
+    </div>
+    <div x-data @click="window.location.href = './tomato.html'"
+        class="bg-[#e4e7eb] p-4 rounded-lg hover:cursor-pointer">
+        <img src="./img/products/Pistachio.png" alt="pistachio">
+        <p class="pt-4">PISTACHIO</p>
+    </div>
+    <div x-data @click="window.location.href = './tomato.html'"
+        class="bg-[#e4e7eb] p-4 rounded-lg hover:cursor-pointer">
+        <img src="./img/products/makhana.png" alt="makhana">
+        <p class="pt-4">MAKHANA</p>
+    </div>
+    <div x-data @click="window.location.href = './tomato.html'"
+        class="bg-[#e4e7eb] p-4 rounded-lg hover:cursor-pointer">
+        <img src="./img/products/dates.png" alt="dates">
+        <p class="pt-4">DATES</p>
+    </div>
+    <div x-data @click="window.location.href = './tomato.html'"
+        class="bg-[#e4e7eb] p-4 rounded-lg hover:cursor-pointer">
+        <img src="./img/products/driedFruits.png" alt="driedFruits">
+        <p class="pt-4">DRIED FRUITS</p>
+    </div>
+    <div x-data @click="window.location.href = './tomato.html'"
+        class="bg-[#e4e7eb] p-4 rounded-lg hover:cursor-pointer">
+        <img src="./img/products/dryFruits.png" alt="dryFruits">
+        <p class="pt-4">DRY FRUITS</p>
+        <span class="text-md text-gray-500">₹ 100</span>
+    </div>
+</div>
+
+<div x-show="tab === 'tab-1'">
+    <div x-data="{ currentIndex: 0, products: [
+            {img: './img/products/almond.png', name: 'ALMONDS'},
+            {img: './img/products/cashew.png', name: 'CASHEWS'},
+            {img: './img/products/Rasins.png', name: 'RASINS'},
+            {img: './img/products/Pistachio.png', name: 'PISTACHIO'},
+            {img: './img/products/makhana.png', name: 'MAKHANA'},
+            {img: './img/products/dates.png', name: 'DATES'},
+            {img: './img/products/driedFruits.png', name: 'DRIED FRUITS'},
+            {img: './img/products/dryFruits.png', name: 'DRY FRUITS'}
+        ] }" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 p-8">
+        <template x-for="(product, index) in products" :key="index">
+            <div x-show="currentIndex <= index && index < currentIndex + 4"
+                @click="window.location.href = './tomato.html'"
+                class="bg-[#e4e7eb] p-4 rounded-lg hover:cursor-pointer">
+                <img :src="product.img" :alt="product.name">
+                <p class="pt-4" x-text="product.name"></p>
+            </div>
+        </template>
+        <div class="flex items-center justify-center mt-4">
+            <button @click="currentIndex = Math.max(currentIndex - 1, 0)"
+                class="w-8 h-8 rounded-full mr-2 bg-gray-400 text-center">
+                <span class="text-lg"> &lt </span>
+            </button>
+            <button @click="currentIndex = Math.min(currentIndex + 1, products.length - 4)"
+                class="w-8 h-8 rounded-full bg-gray-400 text-center">
+                <span class="text-lg"> &gt </span>
+            </button>
+        </div>
+    </div>
+</div>
+
+<section class="flex flex-wrap p-8">
+    <!-- Map -->
+    <div class="w-full md:w-1/2 container mx-auto bg-[#f3f4f6] w-full rounded-md shadow-md p-8 m-8 relative">
+        <!-- Google Maps iframe -->
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d15091.779606431786!2d72.83972014999999!3d18.9780406!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sin!4v1707680117662!5m2!1sen!2sin"
+            width="100%" height="600" frameborder="0" style="border:0" allowfullscreen></iframe>
+    </div>
+
+    <div class="flex flex-col items-center w-full md:w-1/2 mt-4 md:mt-0 md:pl-8">
+        <h1 class="text-4xl font-medium mb-2 text-gray-900">LOCATIONS</h1>
+        <div class="w-16 border-b-2 border-black"></div>
+        <div x-data="{ currentIndex: 0 }" class="w-full md:w-1/2 text-2xl">
+            <div x-show="currentIndex === 0" class="location-content">
+                <!-- First set of locations -->
+                <p class="container mx-auto bg-[#f3f4f6] w-full rounded-md shadow-md p-8 m-8 relative">
+                    PANVEL <br><span class="text-sm text-black"><strong>Address: </strong> Shop No 04,
+                        Natyagrah Complex, Vasudeva Phadke Hall, opp. Saraswati Vidya Mandir School,
+                        Old Panvel, Navi Mumbai, Maharashtra 410206</span>
+                </p>
+                <p class="container mx-auto bg-[#f3f4f6] w-full rounded-md shadow-md p-8 m-8 relative">
+                    KHARGHAR <br> <span class="text-sm text-gray-500"><strong>Address: </strong> Plot No. D,
+                        Co-op.
+                        Society, Shree Krishna Paradise Cooperative Housing Society, Shop No. 29, 69, Sector
+                        12,
+                        Kharghar, Navi Mumbai, Maharashtra 410210</span></p>
+                <p class="container mx-auto bg-[#f3f4f6] w-full rounded-md shadow-md p-8 m-8 relative">
+                    BHIWANDI <br> <span class="text-sm text-gray-500"><strong>Address: </strong> Millat
+                        Nagar, Road
+                        Number 4, Nashik Rd, Bhiwandi, Maharashtra 421302.</span></p>
+            </div>
+            <div x-show="currentIndex === 1" class="location-content">
+                <!-- Second set of locations -->
+                <p class="container mx-auto bg-[#f3f4f6] w-full rounded-md shadow-md p-8 m-8 relative">
+                    Mumbra <br> <span class="text-sm text-gray-500"><strong>Address: </strong> Shop No. 1 &
+                        2, Quality
+                        Heights Near Shilphata, Mumbra, Thane, Maharashtra 400612.</span></p>
+                <p class="container mx-auto bg-[#f3f4f6] w-full rounded-md shadow-md p-8 m-8 relative">
+                    AZAMGARH <br> <span class="text-sm text-gray-500"><strong>Address: </strong>
+                        Zafar Complex, Main Road, Lal Ganj, Azamgarh - 276202 (Near Tehsil).</span></p>
+                <p class="container mx-auto bg-[#f3f4f6] w-full rounded-md shadow-md p-8 m-8 relative">
+                    SANTACRUZ <br> <span class="text-sm text-gray-500"><strong>Address: </strong>
+                        Shop No.1, Gr. Floor, Sunanda Apartment, 400 054, Juhu Tara Rd, opposite Mayur
+                        Hotel, Hasmukh Nagar,
+                        Santacruz West, Mumbai, Maharashtra 400054.</span></p>
+            </div>
+            <!-- <div x-show="currentIndex === 2" class="location-content">
+                            <p class="container mx-auto bg-[#f3f4f6] w-full rounded-md shadow-md p-8 m-8 relative">
+                                Location 7 <br> <span class="text-sm text-gray-500">Address: </span></p>
+                            <p class="container mx-auto bg-[#f3f4f6] w-full rounded-md shadow-md p-8 m-8 relative">
+                                Location 8 <br> <span class="text-sm text-gray-500">Address: </span></p>
+                            <p class="container mx-auto bg-[#f3f4f6] w-full rounded-md shadow-md p-8 m-8 relative">
+                                Location 9 <br> <span class="text-sm text-gray-500">Address: </span></p>
+                        </div> -->
+            <!-- Add more divs for additional sets of locations -->
+            <div class="flex justify-center mt-4">
+                <button @click="currentIndex = 0"
+                    :class="{ 'bg-gray-400': currentIndex !== 0, 'bg-black': currentIndex === 0 }"
+                    class="w-3 h-3 rounded-full mr-2"></button>
+                <button @click="currentIndex = 1"
+                    :class="{ 'bg-gray-400': currentIndex !== 1, 'bg-black': currentIndex === 1 }"
+                    class="w-3 h-3 rounded-full mr-2"></button>
+                <!-- <button @click="currentIndex = 2"
+                                :class="{ 'bg-gray-400': currentIndex !== 2, 'bg-black': currentIndex === 2 }"
+                                class="w-3 h-3 rounded-full"></button> -->
+            </div>
+        </div>
+    </div>
+
+</section>
+
+
+<iframe src="https://www.google.com/maps/embed/v1/place?key=YOUR_API_KEY&q=...">
+<iframe src="https://www.google.com/maps/embed/v1/place?key=YOUR_API_KEY&q=..." width="600" height="450" frameborder="0"
+    style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+
+<!-- 
+    To obtain an API key for Google Maps, you'll need to follow these steps:
+
+1. **Sign up for a Google Cloud Platform (GCP) account**: If you don't already have one, you'll 
+need to sign up for a Google Cloud Platform account. You can do this by visiting the [Google Cloud 
+Platform Console](https://console.cloud.google.com/) and following the instructions to create an 
+account.
+
+2. **Create a new project**: Once you're logged into the GCP Console, create a new project for 
+your website. You can do this by clicking on the project dropdown menu at the top of the page 
+and selecting "New Project". Give your project a name and click "Create".
+
+3. **Enable the Google Maps JavaScript API**: In the GCP Console, navigate to the "APIs & Services" 
+> "Library" section. Search for "Maps JavaScript API" and click on it. Then click the "Enable" 
+button to enable the API for your project.
+
+4. **Create API key**: After enabling the Maps JavaScript API, navigate to the "APIs & Services" > 
+"Credentials" section. Click on the "Create credentials" dropdown and select "API key". A new API 
+key will be generated for you.
+
+5. **Restrict API key (optional)**: For security purposes, it's recommended to restrict your API 
+key. You can restrict it by specifying which APIs it can access, IP addresses that are allowed to 
+use it, and more. You can do this in the "API restrictions" section when creating or editing your 
+API key.
+
+6. **Use the API key**: Once you have your API key, you can use it in your Google Maps embed URLs 
+as shown earlier:
+
+```html
+<iframe src="https://www.google.com/maps/embed/v1/place?key=YOUR_API_KEY&q=..."
+        width="600" height="450" frameborder="0" style="border:0;"
+        allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+```
+
+Replace `YOUR_API_KEY` with the API key you obtained.
+
+That's it! You now have an API key that you can use to access the Google Maps API services for 
+your website. Make sure to keep your API key secure and follow Google's usage policies to avoid 
+any issues.
+ -->
+
+<section class="flex flex-wrap p-8">
+    <!-- Map -->
+    <div class="w-full md:w-1/2 container mx-auto bg-[#f3f4f6] w-full rounded-md shadow-md p-8 m-8 relative">
+        <!-- Google Maps iframe -->
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d15091.779606431786!2d72.83972014999999!3d18.9780406!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sin!4v1707680117662!5m2!1sen!2sin"
+            width="100%" height="600" frameborder="0" style="border:0" allowfullscreen></iframe>
+    </div>
+
+    <div class="flex flex-col items-center w-full md:w-1/2 mt-4 md:mt-0 md:pl-8">
+        <h1 class="text-4xl font-medium mb-2 text-gray-900">LOCATIONS</h1>
+        <div class="w-16 border-b-2 border-black"></div>
+        <div x-data="{ currentIndex: 0 }" class="w-full md:w-1/2 text-2xl">
+            <div x-show="currentIndex === 0" class="location-content">
+                <!-- First set of locations -->
+                <p @click="openMap(0)"
+                    class="container mx-auto bg-[#f3f4f6] w-full rounded-md shadow-md p-8 m-8 relative cursor-pointer">
+                    PANVEL <br><span class="text-sm text-black"><strong>Address: </strong> Shop No 04,
+                        Natyagrah Complex, Vasudeva Phadke Hall, opp. Saraswati Vidya Mandir School,
+                        Old Panvel, Navi Mumbai, Maharashtra 410206</span>
+                </p>
+                <p @click="openMap(1)"
+                    class="container mx-auto bg-[#f3f4f6] w-full rounded-md shadow-md p-8 m-8 relative cursor-pointer">
+                    KHARGHAR <br> <span class="text-sm text-gray-500"><strong>Address: </strong> Plot No. D,
+                        Co-op.
+                        Society, Shree Krishna Paradise Cooperative Housing Society, Shop No. 29, 69, Sector
+                        12,
+                        Kharghar, Navi Mumbai, Maharashtra 410210</span></p>
+                <p @click="openMap(2)"
+                    class="container mx-auto bg-[#f3f4f6] w-full rounded-md shadow-md p-8 m-8 relative cursor-pointer">
+                    BHIWANDI <br> <span class="text-sm text-gray-500"><strong>Address: </strong> Millat
+                        Nagar, Road
+                        Number 4, Nashik Rd, Bhiwandi, Maharashtra 421302.</span></p>
+            </div>
+            <div x-show="currentIndex === 1" class="location-content">
+                <!-- Second set of locations -->
+                <p @click="openMap(3)"
+                    class="container mx-auto bg-[#f3f4f6] w-full rounded-md shadow-md p-8 m-8 relative cursor-pointer">
+                    Mumbra <br> <span class="text-sm text-gray-500"><strong>Address: </strong> Shop No. 1 &
+                        2, Quality
+                        Heights Near Shilphata, Mumbra, Thane, Maharashtra 400612.</span></p>
+                <p @click="openMap(4)"
+                    class="container mx-auto bg-[#f3f4f6] w-full rounded-md shadow-md p-8 m-8 relative cursor-pointer">
+                    AZAMGARH <br> <span class="text-sm text-gray-500"><strong>Address: </strong>
+                        Zafar Complex, Main Road, Lal Ganj, Azamgarh - 276202 (Near Tehsil).</span></p>
+                <p @click="openMap(5)"
+                    class="container mx-auto bg-[#f3f4f6] w-full rounded-md shadow-md p-8 m-8 relative cursor-pointer">
+                    SANTACRUZ <br> <span class="text-sm text-gray-500"><strong>Address: </strong>
+                        Shop No.1, Gr. Floor, Sunanda Apartment, 400 054, Juhu Tara Rd, opposite Mayur
+                        Hotel, Hasmukh Nagar,
+                        Santacruz West, Mumbai, Maharashtra 400054.</span></p>
+            </div>
+            <div class="flex justify-center mt-4">
+                <button @click="currentIndex = 0"
+                    :class="{ 'bg-gray-400': currentIndex !== 0, 'bg-black': currentIndex === 0 }"
+                    class="w-3 h-3 rounded-full mr-2"></button>
+                <button @click="currentIndex = 1"
+                    :class="{ 'bg-gray-400': currentIndex !== 1, 'bg-black': currentIndex === 1 }"
+                    class="w-3 h-3 rounded-full mr-2"></button>
+                <!-- <button @click="currentIndex = 2"
+                                                :class="{ 'bg-gray-400': currentIndex !== 2, 'bg-black': currentIndex === 2 }"
+                                                class="w-3 h-3 rounded-full"></button> -->
+            </div>
+        </div>
+    </div>
+
+</section>
+<script>
+    function openMap(index) {
+        const maps = [
+            'https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d15091.779606431786!2d72.83972014999999!3d18.9780406!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sin!4v1707680117662!5m2!1sen!2sin',
+            'https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d3210.2352085199183!2d-73.9854281839131!3d40.748817949999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sin!4v1707680117662!5m2!1sen!2sin',
+            'https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d5244.053680527964!2d-0.12112184999999995!3d51.50213664999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sin!4v1707680117662!5m2!1sen!2sin',
+            'https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d3210.2352085199183!2d-73.9854281839131!3d40.748817949999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sin!4v1707680117662!5m2!1sen!2sin',
+            'https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d5244.053680527964!2d-0.12112184999999995!3d51.50213664999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sin!4v1707680117662!5m2!1sen!2sin',
+            'https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d3210.2352085199183!2d-73.9854281839131!3d40.748817949999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sin!4v1707680117662!5m2!1sen!2sin',
+        ];
+        document.querySelector('iframe').src = maps[index];
+    }
+</script>
+
+<section class="m-12 p-4 bg-gray-200 rounded shadow-lg">
+    <div class="flex flex-col md:flex-row p-4 rounded">
+        <div class="w-full md:w-1/2 p-8 rounded">
+            <img class="object-contain md:object-cover object-center rounded w-full md:max-h-96 p-8" alt="hero"
+                src="./img/products/almond.png">
+        </div>
+        <div class="flex flex-col w-full md:w-1/2 mt-4 md:mt-0 md:pl-8 py-8 text-left">
+            <h1 class="sm:text-4xl text-2xl text-center font-medium title-font mb-2 text-gray-900 pt-4 px-8">
+                ALMONDS</h1>
+            <div class="w-16 border-b-2 border-black mx-auto my-2"></div>
+            <p class="lg:w-2/3 mx-auto leading-relaxed text-lg text-gray-700 pt-4 px-8">Fresh and high-quality
+                tomatoes straight from our farm to your kitchen. Our tomatoes are grown using sustainable farming
+                practices. They are juicy, ripe, and packed with flavor. Perfect for salads, sauces, or simply enjoying
+                on their own.
+            </p>
+            <p class="lg:w-2/3 mx-auto leading-relaxed text-lg text-gray-700 pt-4 font-bold px-8">Price: <span
+                    class="font-normal">₹ 100</span>
+            </p>
+            <p class="lg:w-2/3 mx-auto leading-relaxed text-lg text-gray-700 pt-4 font-bold px-8">Availability:
+                <span class="font-normal">In Stock</span>
+            </p>
+            <p class="lg:w-2/3 mx-auto leading-relaxed text-lg text-gray-700 pt-4 font-bold px-8">Shipping: <span
+                    class="font-normal">Available Nationwide</span>
+            </p>
+        </div>
+    </div>
+</section>
+
+<section class="m-12 p-4 bg-gray-200 rounded shadow-lg">
+    <div class="flex flex-col md:flex-row p-4 rounded">
+        <div class="w-full md:w-1/2 p-8 rounded flex items-center justify-center">
+            <div class="aspect-w-16 aspect-h-12">
+                <img class="object-cover object-center rounded lg:max-h-96" alt="hero" src="./img/products/almond.png">
+            </div>
+        </div>
+        <div class="flex flex-col w-full md:w-1/2 mt-4 md:mt-0 md:pl-8 py-8 text-left">
+            <h1 class="sm:text-4xl text-2xl text-center font-medium title-font mb-2 text-gray-900 pt-4 px-8">
+                ALMONDS</h1>
+            <div class="w-16 border-b-2 border-black mx-auto my-2"></div>
+            <p class="lg:w-2/3 mx-auto leading-relaxed text-lg text-gray-700 pt-4 px-8">Fresh and
+                high-quality
+                tomatoes straight from our farm to your kitchen. Our tomatoes are grown using sustainable
+                farming
+                practices. They are juicy, ripe, and packed with flavor. Perfect for salads, sauces, or
+                simply enjoying
+                on their own.
+            </p>
+            <p class="lg:w-2/3 mx-auto leading-relaxed text-lg text-gray-700 pt-4 font-bold px-8">Price:
+                <span class="font-normal">₹ 100</span>
+            </p>
+            <p class="lg:w-2/3 mx-auto leading-relaxed text-lg text-gray-700 pt-4 font-bold px-8">
+                Availability:
+                <span class="font-normal">In Stock</span>
+            </p>
+            <p class="lg:w-2/3 mx-auto leading-relaxed text-lg text-gray-700 pt-4 font-bold px-8">Shipping:
+                <span class="font-normal">Available Nationwide</span>
+            </p>
+        </div>
+    </div>
+</section>
+<section x-data="{ currentIndex: 0 }" class="mb-[-40px]">
+    <h1 class="text-2xl pt-8 px-2 pl-[4em]">Products related to this
+        item</h1>
+    <div x-show="currentIndex === 0" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 px-8 m-8">
+        <!-- first products -->
+        <div x-data @click="window.location.href = './product-details.html'"
+            class="bg-[#e4e7eb] p-4 rounded-lg hover:cursor-pointer">
+            <img src="./img/products/cashew.png" alt="cashew">
+            <p class="pt-4">CASHEWS</p>
+            <span class="text-md text-gray-500">₹ 100</span>
+        </div>
+        <div x-data @click="window.location.href = './product-details.html'"
+            class="bg-[#e4e7eb] p-4 rounded-lg hover:cursor-pointer">
+            <img src="./img/products/dates.png" alt="dates">
+            <p class="pt-4">DATES</p>
+            <span class="text-md text-gray-500">₹ 100</span>
+        </div>
+        <div x-data @click="window.location.href = './product-details.html'"
+            class="bg-[#e4e7eb] p-4 rounded-lg hover:cursor-pointer">
+            <img src="./img/products/dryFruits.png" alt="dryFruits">
+            <p class="pt-4">DRY FRUITS</p>
+            <span class="text-md text-gray-500">₹ 100</span>
+        </div>
+        <div x-data @click="window.location.href = './product-details.html'"
+            class="bg-[#e4e7eb] p-4 rounded-lg hover:cursor-pointer">
+            <img src="./img/products/Rasins.png" alt="rasins">
+            <p class="pt-4">RASINS</p>
+            <span class="text-md text-gray-500">₹ 100</span>
+        </div>
+    </div>
+    <div x-show="currentIndex === 1" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 px-8 m-8">
+        <!-- second products -->
+        <div x-data @click="window.location.href = './product-details.html'"
+            class="bg-[#e4e7eb] p-4 rounded-lg hover:cursor-pointer">
+            <img src="./img/products/honey.png" alt="honey">
+            <p class="pt-4">HONEY</p>
+            <span class="text-md text-gray-500">₹ 100</span>
+        </div>
+        <div x-data @click="window.location.href = './product-details.html'"
+            class="bg-[#e4e7eb] p-4 rounded-lg hover:cursor-pointer">
+            <img src="./img/products/driedFruits.png" alt="driedFruits">
+            <p class="pt-4">DRIED FRUITS</p>
+            <span class="text-md text-gray-500">₹ 100</span>
+        </div>
+        <div x-data @click="window.location.href = './product-details.html'"
+            class="bg-[#e4e7eb] p-4 rounded-lg hover:cursor-pointer">
+            <img src="./img/products/Pistachio.png" alt="pistachio">
+            <p class="pt-4">PISTACHIO</p>
+            <span class="text-md text-gray-500">₹ 100</span>
+        </div>
+        <div x-data @click="window.location.href = './product-details.html'"
+            class="bg-[#e4e7eb] p-4 rounded-lg hover:cursor-pointer">
+            <img src="./img/products/gifts.png" alt="gifts">
+            <p class="pt-4">GIFTS</p>
+            <span class="text-md text-gray-500">₹ 100</span>
+        </div>
+    </div>
+    <div class="flex justify-center space-x-4 pb-4">
+        <button @click="currentIndex = 0"
+            class="w-12 h-12 bg-gray-200 hover:bg-gray-300 text-black font-bold rounded-full">&lt;</button>
+        <button @click="currentIndex = 1"
+            class="w-12 h-12 bg-gray-200 hover:bg-gray-300 text-black font-bold rounded-full">&gt;</button>
+    </div>
+</section>
+
+<div x-data="{ currentIndex: 0, products: [
+                                { id: 1, img: './img/products/almond.png', name: 'ALMONDS' },
+                                { id: 2, img: './img/products/cashew.png', name: 'CASHEWS' },
+                                { id: 3, img: './img/products/Rasins.png', name: 'RASINS' },
+                                { id: 4, img: './img/products/Pistachio.png', name: 'PISTACHIO' },
+                                { id: 5, img: './img/products/makhana.png', name: 'MAKHANA' },
+                                { id: 6, img: './img/products/dates.png', name: 'DATES' },
+                                { id: 7, img: './img/products/driedFruits.png', name: 'DRIED FRUITS' },
+                                { id: 8, img: './img/products/dryFruits.png', name: 'DRY FRUITS' }
+                            ] }">
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 p-8">
+        <template x-for="(product, index) in products" :key="index">
+            <div x-show="currentIndex <= index && index < currentIndex + 4"
+                @click="redirectToProductDetails(product.id)" class="bg-[#e4e7eb] p-4 rounded-lg hover:cursor-pointer">
+                <img :src="product.img" :alt="product.name">
+                <p class="pt-4" x-text="product.name"></p>
+            </div>
+        </template>
+    </div>
+    <div class="flex items-center justify-center mt-4">
+        <button @click="currentIndex = Math.max(currentIndex - 1, 0)"
+            class="w-12 h-12 rounded-full mr-2 bg-[#e4e7eb] text-xl text-center">
+            <span class="text-lg">&lt</span>
+        </button>
+        <button @click="currentIndex = Math.min(currentIndex + 1, products.length - 4)"
+            class="w-12 h-12 rounded-full bg-[#e4e7eb] text-xl text-center">
+            <span class="text-lg">&gt</span>
+        </button>
+    </div>
+</div>
+
+Product-detail code:
+<section class="m-12 p-4 bg-gray-200 rounded shadow-lg">
+    <div id="app" x-data="productDetailsData" class="container">
+        <div class="flex flex-col md:flex-row p-4 rounded">
+            <div class="w-full md:w-1/2 p-8 rounded flex items-center justify-center">
+                <div class="aspect-w-16 aspect-h-12">
+                    <img class="object-cover object-center rounded lg:max-h-96" x-bind:src="product.img"
+                        x-bind:alt="product.name">
+                </div>
+            </div>
+            <div class="flex flex-col w-full md:w-1/2 mt-4 md:mt-0 md:pl-8 py-8 text-left">
+                <h1 class="sm:text-4xl text-2xl text-center font-medium title-font mb-2 text-gray-900 pt-4 px-8"
+                    x-text="product.name"></h1>
+                <div class="w-16 border-b-2 border-black mx-auto my-2"></div>
+                <p class="lg:w-2/3 mx-auto leading-relaxed text-lg text-gray-700 pt-4 px-8"
+                    x-text="product.description"></p>
+                <p class="lg:w-2/3 mx-auto leading-relaxed text-lg text-gray-700 pt-4 font-bold px-8">Price: <span
+                        class="font-normal" x-text="product.price"></span></p>
+                <p class="lg:w-2/3 mx-auto leading-relaxed text-lg text-gray-700 pt-4 font-bold px-8">Availability:
+                    <span class="font-normal" x-text="product.availability"></span>
+                </p>
+                <p class="lg:w-2/3 mx-auto leading-relaxed text-lg text-gray-700 pt-4 font-bold px-8">Shipping: <span
+                        class="font-normal" x-text="product.shipping"></span></p>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="mb-8" x-data="productDetailsData">
+    <h1 class="text-2xl pt-8 px-2 pl-[4em]">Products related to this item</h1>
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 px-8 m-8">
+        <!-- Iterate through related products of the current main product -->
+        <template x-for="(relatedProduct, index) in product.related" :key="index">
+            <div class="related-product bg-[#e4e7eb] p-4 rounded-lg"
+                @click="redirectToProductDetails(relatedProduct.id)">
+                <img x-bind:src="relatedProduct.image" x-bind:alt="relatedProduct.name" class="lg:p-10">
+                <p class="pt-4" x-text="relatedProduct.name"></p>
+            </div>
+        </template>
+    </div>
+</section>
+<!-- Pagination Section -->
+<!-- <div class="flex items-center justify-center">
+                <button @click="currentIndex = Math.max(currentIndex - 1, 0)"
+                    class="w-12 h-12 rounded-full mr-2 bg-[#e4e7eb] text-xl text-center">
+                    <span class="text-lg">&lt;</span>
+                </button>
+                <button @click="currentIndex = Math.min(currentIndex + 1, products.length - 1)"
+                    class="w-12 h-12 rounded-full bg-[#e4e7eb] text-xl text-center">
+                    <span class="text-lg">&gt;</span>
+                </button>
+            </div> -->
+<script src="https://cdn.jsdelivr.net/npm/alpinejs@2.8.2/dist/alpine.min.js"
+    integrity="sha256-Cf3Lv7u5sRQ8toUa0L4PV4B8IG/9G2xVRUN2s5EADyM=" crossorigin="anonymous"></script>
+<script>
+    const productDetailsData = {
+        product: {},
+        fetchProductDetails() {
+            // Parse the product ID from the URL
+            const urlParams = new URLSearchParams(window.location.search);
+            const productId = urlParams.get('id');
+
+            // Find the product with the corresponding ID
+            for (const productCategory of this.products) {
+                const foundProduct = this.products.find(product => product.id == productId);
+                if (foundProduct) {
+                    this.product = foundProduct;
+                    break;
+                }
+            }
+        },
+        findRelated(product) {
+        },
+        products: [
+
+            {
+                id: 1,
+                img: './img/products/cashew.png',
+                name: 'CASHEWS',
+                description: 'Description for cashews.',
+                price: '₹ 100',
+                availability: 'In Stock',
+                shipping: 'Available Nationwide',
+                related: [
+                    {
+                        name: 'ALMONDS',
+                        image: './img/products/almond.png',
+                    },
+                    {
+                        name: 'DATES',
+                        image: './img/products/dates.png',
+                    },
+                    {
+                        name: 'RASINS',
+                        image: './img/products/rasins.png',
+                    },
+                    {
+                        name: 'PISTACHIO',
+                        image: './img/products/pistachio.png',
+                    },
+                ]
+            },
+            {
+                id: 2,
+                img: './img/products/Rasins.png',
+                name: 'RASINS',
+                description: 'Description for rasins.',
+                price: '₹ 100',
+                availability: 'In Stock',
+                shipping: 'Available Nationwide',
+                related: [
+                    {
+                        name: 'ALMONDS',
+                        image: './img/products/almond.png',
+                    },
+                    {
+                        name: 'DATES',
+                        image: './img/products/dates.png',
+                    },
+                    {
+                        name: 'RASINS',
+                        image: './img/products/cashew.png',
+                    },
+                    {
+                        name: 'PISTACHIO',
+                        image: './img/products/pistachio.png',
+                    },
+                ]
+            },
+            {
+                id: 3,
+                img: './img/products/makhana.png',
+                name: 'MAKHANA',
+                description: 'Description for makhana.',
+                price: '₹ 100',
+                availability: 'In Stock',
+                shipping: 'Available Nationwide',
+                related: [
+                    {
+                        name: 'ALMONDS',
+                        image: './img/products/almond.png',
+                    },
+                    {
+                        name: 'DATES',
+                        image: './img/products/dates.png',
+                    },
+                    {
+                        name: 'RASINS',
+                        image: './img/products/rasins.png',
+                    },
+                    {
+                        name: 'PISTACHIO',
+                        image: './img/products/pistachio.png',
+                    },
+                ]
+            },
+            {
+                id: 4,
+                img: './img/products/dates.png',
+                name: 'DATES',
+                description: 'Description for dates.',
+                price: '₹ 100',
+                availability: 'In Stock',
+                shipping: 'Available Nationwide',
+                related: [
+                    {
+                        name: 'ALMONDS',
+                        image: './img/products/almond.png',
+                    },
+                    {
+                        name: 'DATES',
+                        image: './img/products/dates.png',
+                    },
+                    {
+                        name: 'RASINS',
+                        image: './img/products/rasins.png',
+                    },
+                    {
+                        name: 'PISTACHIO',
+                        image: './img/products/pistachio.png',
+                    },
+                ]
+            },
+            {
+                id: 5,
+                img: './img/products/almond.png',
+                name: 'ALMONDS',
+                description: 'Fresh and high-quality almonds straight from our farm to your kitchen. Our almonds are grown using sustainable farming practices. They are crunchy, nutritious, and perfect for snacking or adding to your favorite recipes.',
+                price: '₹ 100',
+                availability: 'In Stock',
+                shipping: 'Available Nationwide',
+                related: [
+                    {
+                        name: 'CASHEWS',
+                        image: './img/products/cashew.png',
+                    },
+                    {
+                        name: 'DATES',
+                        image: './img/products/dates.png',
+                    },
+                    {
+                        name: 'RASINS',
+                        image: './img/products/rasins.png',
+                    },
+                    {
+                        name: 'PISTACHIO',
+                        image: './img/products/pistachio.png',
+                    },
+                ]
+            },
+
+            {
+                id: 6,
+                img: './img/products/honey.png',
+                name: 'HONEY',
+                description: 'Description for pistachio.',
+                price: '₹ 100',
+                availability: 'In Stock',
+                shipping: 'Available Nationwide',
+                related: [
+                    {
+                        name: 'CASHEWS',
+                        image: './img/products/cashew.png',
+                    },
+                    {
+                        name: 'DATES',
+                        image: './img/products/dates.png',
+                    },
+                    {
+                        name: 'RASINS',
+                        image: './img/products/rasins.png',
+                    },
+                    {
+                        name: 'PISTACHIO',
+                        image: './img/products/pistachio.png',
+                    },
+                ]
+            },
+            {
+                id: 7,
+                img: './img/products/Pistachio.png',
+                name: 'PISTACHIO',
+                description: 'Description for pistachio.',
+                price: '₹ 100',
+                availability: 'In Stock',
+                shipping: 'Available Nationwide',
+                related: [
+                    {
+                        name: 'CASHEWS',
+                        image: './img/products/cashew.png',
+                    },
+                    {
+                        name: 'DATES',
+                        image: './img/products/dates.png',
+                    },
+                    {
+                        name: 'RASINS',
+                        image: './img/products/rasins.png',
+                    },
+                    {
+                        name: 'PISTACHIO',
+                        image: './img/products/makhana.png',
+                    },
+                ]
+            },
+            {
+                id: 8,
+                img: './img/products/sweets.png',
+                name: 'SWEETS',
+                description: 'Description for pistachio.',
+                price: '₹ 100',
+                availability: 'In Stock',
+                shipping: 'Available Nationwide',
+                related: [
+                    {
+                        name: 'COOKIES',
+                        image: './img/products/cookies.png',
+                    },
+                    {
+                        name: 'DATES',
+                        image: './img/products/dates.png',
+                    },
+                    {
+                        name: 'RASINS',
+                        image: './img/products/rasins.png',
+                    },
+                    {
+                        name: 'PISTACHIO',
+                        image: './img/products/pistachio.png',
+                    },
+                ]
+            },
+
+            {
+                id: 9,
+                img: './img/products/spices.png',
+                name: ' SPICES',
+                description: 'Description for dried fruits.',
+                price: '₹ 100',
+                availability: 'In Stock',
+                shipping: 'Available Nationwide',
+                related: [
+                    {
+                        name: 'COLD DRINKS',
+                        image: './img/products/coldrink.png',
+                    },
+                    {
+                        name: 'DATES',
+                        image: './img/products/dates.png',
+                    },
+                    {
+                        name: 'RASINS',
+                        image: './img/products/rasins.png',
+                    },
+                    {
+                        name: 'PISTACHIO',
+                        image: './img/products/pistachio.png',
+                    },
+                ]
+            },
+
+            {
+                id: 10,
+                img: './img/products/cookies.png',
+                name: 'DRY FRUITS',
+                description: 'Description for dry fruits.',
+                price: '₹ 100',
+                availability: 'In Stock',
+                shipping: 'Available Nationwide',
+                related: [
+                    {
+                        name: 'CASHEWS',
+                        image: './img/products/cashew.png',
+                    },
+                    {
+                        name: 'COLD DRINKS',
+                        image: './img/products/coldrink.png',
+                    },
+                    {
+                        name: 'RASINS',
+                        image: './img/products/rasins.png',
+                    },
+                    {
+                        name: 'PISTACHIO',
+                        image: './img/products/pistachio.png',
+                    },
+
+                ]
+            },
+            {
+                id: 11,
+                img: './img/products/coldrink.png',
+                name: 'COLD DRINKS',
+                description: 'Description for dried fruits.',
+                price: '₹ 100',
+                availability: 'In Stock',
+                shipping: 'Available Nationwide',
+                related: [
+                    {
+                        name: 'CASHEWS',
+                        image: './img/products/cashew.png',
+                    },
+                    {
+                        name: 'DATES',
+                        image: './img/products/dates.png',
+                    },
+                    {
+                        name: 'RASINS',
+                        image: './img/products/rasins.png',
+                    },
+                    {
+                        name: 'PISTACHIO',
+                        image: './img/products/pistachio.png',
+                    },
+                ]
+            },
+            {
+                id: 12,
+                img: './img/products/gifts.png',
+                name: 'GIFTS',
+                description: 'Description for dried fruits.',
+                price: '₹ 100',
+                availability: 'In Stock',
+                shipping: 'Available Nationwide',
+                related: [
+                    {
+                        name: 'COLD DRINKS',
+                        image: './img/products/coldrink.png',
+                    },
+                    {
+                        name: 'DATES',
+                        image: './img/products/dates.png',
+                    },
+                    {
+                        name: 'RASINS',
+                        image: './img/products/rasins.png',
+                    },
+                    {
+                        name: 'PISTACHIO',
+                        image: './img/products/pistachio.png',
+                    },
+                ]
+            },
+            {
+                id: 13,
+                img: './img/products/driedFruits.png',
+                name: 'DRIED FRUITS',
+                description: 'Description for dried fruits.',
+                price: '₹ 100',
+                availability: 'In Stock',
+                shipping: 'Available Nationwide',
+                related: [
+                    {
+                        name: 'COLD DRINKS',
+                        image: './img/products/coldrink.png',
+                    },
+                    {
+                        name: 'DATES',
+                        image: './img/products/dates.png',
+                    },
+                    {
+                        name: 'RASINS',
+                        image: './img/products/rasins.png',
+                    },
+                    {
+                        name: 'PISTACHIO',
+                        image: './img/products/pistachio.png',
+                    },
+                ]
+            },
+            {
+                id: 14,
+                img: './img/products/dryFruits.png',
+                name: 'DRY FRUITS',
+                description: 'Description for dried fruits.',
+                price: '₹ 100',
+                availability: 'In Stock',
+                shipping: 'Available Nationwide',
+                related: [
+                    {
+                        name: 'COLD DRINKS',
+                        image: './img/products/coldrink.png',
+                    },
+                    {
+                        name: 'DATES',
+                        image: './img/products/dates.png',
+                    },
+                    {
+                        name: 'RASINS',
+                        image: './img/products/rasins.png',
+                    },
+                    {
+                        name: 'PISTACHIO',
+                        image: './img/products/pistachio.png',
+                    },
+                ]
+            },
+            // Add more products here...
+        ],
+        // Add more product categories here...
+
+    };
+
+    productDetailsData.fetchProductDetails(); // Fetch product details when the page loads
+
+    window.productDetailsData = productDetailsData;
+</script>
+
+<section class="flex">
+    <div class="w-1/2">
+        <img src="./img/logo.png" alt="Logo">
+    </div>
+    <div class="w-1/2">
+        <h2>About Us</h2>
+        <p>Ajwa House of Dry Fruits, is a brand developed and owned by Mr. Rizwan Patel & Azhar Patel. We started our
+            first outlet in Kharghar, in 2014 and now we have 7+ outlets across INDIA. We brings you a collection of
+            carefully selected foods from India and across the world. In our passionate search to offer food that is
+            unique and full of health, we have ensured you get only the best products.</p>
+
+        <img src="./img/logo.png" alt="Logo">
+        <h2>Our Products</h2>
+        <p>Our products are well-loved for their quality and taste. We have gained expertise in fine Indian food
+            products and food ingredients across categories - Dry Fruits, Dried Fruits, Dates, Sweets, Chocolates,
+            Namkeen, Bakery Products, Mukhwaas, Spices, Gift Boxes and Groceries. We are sure you will find our quality
+            products appetizing.</p>
+
+        <img src="./img/logo.png" alt="Logo">
+        <h2>OUR MISSION</h2>
+        <p>Our Mission is not only to earn money but also Ajwa wants to deliver the best quality healthy products
+            towards our customers.</p>
+
+        <img src="./img/logo.png" alt="Logo">
+        <h2>OUR VISION</h2>
+        <p>Our Vision is to establish Ajwa store in every state of our country & globally so that every people can avail
+            our quality products and keep themselves healthier.</p>
+    </div>
+</section>
+
+<section class="flex flex-col-reverse md:flex-row m-8 p-8">
+    <div class="w-full md:w-1/2">
+        <img src="./img/logo.png" alt="Logo"
+            class="object-cover object-center rounded w-full h-64 md:h-auto transition ease-in-out duration-200">
+    </div>
+    <div class="w-full md:w-1/2 flex flex-col mt-4 md:mt-0 md:pl-8">
+        <h1 class="sm:text-3xl text-center text-2xl font-medium title-font mb-2 text-gray-900">About Us</h1>
+        <p class="lg:w-2/3 mx-auto leading-relaxed text-base text-gray-700">Ajwa House of Dry Fruits, is a
+            brand developed and owned by Mr. Rizwan Patel & Azhar Patel. We started our
+            first outlet in Kharghar, in 2014 and now we have 7+ outlets across INDIA. We brings you a
+            collection of
+            carefully selected foods from India and across the world. In our passionate search to offer food
+            that is
+            unique and full of health, we have ensured you get only the best products.</p>
+
+        <h2><img src="./img/logo.png" alt="Our Products" class="w-40 h-20 inline-block mr-2">Our Products
+        </h2>
+        <p class="lg:w-2/3 mx-auto leading-relaxed text-base text-gray-700">Our products are well-loved for
+            their
+            quality and taste. We have gained expertise in fine Indian
+            food
+            products and food ingredients across categories - Dry Fruits, Dried Fruits, Dates, Sweets,
+            Chocolates,
+            Namkeen, Bakery Products, Mukhwaas, Spices, Gift Boxes and Groceries. We are sure you will find
+            our quality
+            products appetizing.</p>
+
+        <h2><img src="./img/mission.svg" alt="Our Mission" class="w-6 h-6 inline-block mr-2">Our Mission
+        </h2>
+        <p class="lg:w-2/3 mx-auto leading-relaxed text-base text-gray-700">Our Mission is not only to earn
+            money but
+            also Ajwa wants to deliver the best quality healthy
+            products
+            towards our customers.</p>
+
+        <h2><img src="./img/vision.svg" alt="Our Vision" class="w-6 h-6 inline-block mr-2">Our Vision</h2>
+        <p class="lg:w-2/3 mx-auto leading-relaxed text-base text-gray-700">Our Vision is to establish Ajwa
+            store in
+            every state of our country & globally so that every
+            people can avail
+            our quality products and keep themselves healthier.</p>
+    </div>
+</section>
+
+<section x-data="{ currentIndex: 0 }" class="flex w-full p-8 mt-16">
+    <div class="container mx-auto w-full md:w-5/6 p-4 m-4 relative">
+        <h1 class="text-center text-2xl md:text-4xl lg:text-5xl p-4 align-center">Testimonials</h1>
+        <div class="w-16 border-b-2 border-black mx-auto my-2"></div>
+        <div class="flex flex-col md:flex-row justify-center pb-8">
+            <!-- Testimonials -->
+            <div x-show="currentIndex === 0" class="testimonial flex flex-wrap justify-around">
+                <!-- Quality Products -->
+                <div class="flex flex-col items-center m-4 md:m-8 mb-4 md:mb-0">
+                    <img src="./img/s.png" alt="Quality Products Icon" class="w-18 h-16 mb-2">
+                    <h2 class="text-lg md:text-xl font-semibold mb-2">Quality Products</h2>
+                    <p class="text-gray-600 text-sm md:text-md">Grocery store offers a wide range of
+                        high-quality
+                        products that are
+                        fresh and reliable.</p>
+                </div>
+                <!-- Multiple Quality Checks -->
+                <div class="flex flex-col items-center m-4 md:m-8 mb-4 md:mb-0">
+                    <img src="./img/j.png" alt="Multiple Quality Checks Icon" class="w-18 h-16 mb-2">
+                    <h2 class="text-lg md:text-xl font-semibold mb-2">Multiple Quality Checks</h2>
+                    <p class="text-gray-600 text-sm md:text-md">Products go through multiple quality checks
+                        to ensure
+                        you get the best.
+                    </p>
+                </div>
+            </div>
+            <div x-show="currentIndex === 1" class="testimonial flex flex-wrap justify-around">
+                <!-- Fast Delivery -->
+                <div class="flex flex-col items-center m-4 md:m-8 mb-4 md:mb-0">
+                    <img src="./img/v.png" alt="Fast Delivery Icon" class="w-18 h-16 mb-2">
+                    <h2 class="text-lg md:text-xl font-semibold mb-2">Fast Delivery</h2>
+                    <p class="text-gray-600 text-sm md:text-md">We ensure fast delivery so your groceries
+                        arrive at your
+                        doorstep
+                        in no time.
+                    </p>
+                </div>
+                <!-- Excellent Customer Service -->
+                <div class="flex flex-col items-center m-4 md:m-8 mb-4 md:mb-0">
+                    <img src="./img/m.png" alt="Excellent Customer Service Icon" class="w-18 h-16 mb-2">
+                    <h2 class="text-lg md:text-xl font-semibold mb-2">Excellent Customer Service</h2>
+                    <p class="text-gray-600 text-sm md:text-md">Our customer service team is always ready to
+                        help you
+                        with your
+                        needs.</p>
+                </div>
+            </div>
+        </div>
+        <!-- Dots Navigation -->
+        <div class="absolute bottom-0 left-1/2 transform -translate-x-1/2 flex space-x-2 p-4">
+            <button @click="currentIndex = 0"
+                :class="{ 'bg-gray-400': currentIndex !== 0, 'bg-black': currentIndex === 0 }"
+                class="w-3 h-3 rounded-full"></button>
+            <button @click="currentIndex = 1"
+                :class="{ 'bg-gray-400': currentIndex !== 1, 'bg-black': currentIndex === 1 }"
+                class="w-3 h-3 rounded-full"></button>
+        </div>
+    </div>
+</section>
+
+products: [
+{
+id: 1,
+img: './img/products/cashew.png',
+name: 'CASHEWS',
+description: 'Discover the epitome of nutty luxury with AJWA\'s Cashews. We\'ve masterfully sorted each cashew to a
+pearl perfection, unlocking their rich, buttery flavor.',
+related: [
+{
+name: 'ALMONDS',
+image: './img/products/almond.png',
+},
+{
+name: 'DATES',
+image: './img/products/dates.png',
+},
+{
+name: 'RASINS',
+image: './img/products/rasins.png',
+},
+{
+name: 'PISTACHIO',
+image: './img/products/pistachio.png',
+},
+]
+},
+{
+id: 2,
+img: './img/products/Rasins.png',
+name: 'RASINS',
+description: 'RaisinNature\'s Sweet Gems, Ready to Elevate Your Day.Our carefully selected, plump raisins are naturally
+sweet, bursting with rich flavor.A healthy and delicious addition to your routine,',
+related: [
+{
+name: 'ALMONDS',
+image: './img/products/almond.png',
+},
+{
+name: 'DATES',
+image: './img/products/dates.png',
+},
+{
+name: 'RASINS',
+image: './img/products/cashew.png',
+},
+{
+name: 'PISTACHIO',
+image: './img/products/pistachio.png',
+},
+]
+},
+{
+id: 3,
+img: './img/products/makhana.png',
+name: 'MAKHANA',
+description: 'Indulge in the irresistible charm of AJWA\'s Makhana, where each nut is a symphony of taste and
+texture.Savor the perfect crunch delight in every bite.',
+related: [
+{
+name: 'ALMONDS',
+image: './img/products/almond.png',
+},
+{
+name: 'DATES',
+image: './img/products/dates.png',
+},
+{
+name: 'RASINS',
+image: './img/products/rasins.png',
+},
+{
+name: 'PISTACHIO',
+image: './img/products/pistachio.png',
+},
+]
+},
+{
+id: 4,
+img: './img/products/dates.png',
+name: 'DATES',
+description: 'A paragon of natural sweetness. Harvested with care, our dates offer impeccable taste, rich heritage, and
+a healthy indulgence for discerning connoisseurs. AJWA Dates are nature\'s gift of perfection.Handpicked for quality and
+taste, our dates exude timeless elegance, embodying health and exquisite flavour for the discerning palate.',
+related: [
+{
+name: 'ALMONDS',
+image: './img/products/almond.png',
+},
+{
+name: 'DATES',
+image: './img/products/dates.png',
+},
+{
+name: 'RASINS',
+image: './img/products/rasins.png',
+},
+{
+name: 'PISTACHIO',
+image: './img/products/pistachio.png',
+},
+]
+},
+{
+id: 5,
+img: './img/products/almond.png',
+name: 'ALMONDS',
+description: 'Indulge in the irresistible charm of AJWA\'s Almonds, where each nut is a symphony of taste and
+texture.Savor the perfect crunch, meticulously crafted to perfection, and experience pure nutty delight in every bite.',
+related: [
+{
+name: 'CASHEWS',
+image: './img/products/cashew.png',
+},
+{
+name: 'DATES',
+image: './img/products/dates.png',
+},
+{
+name: 'RASINS',
+image: './img/products/rasins.png',
+},
+{
+name: 'PISTACHIO',
+image: './img/products/pistachio.png',
+},
+]
+},
+
+{
+id: 6,
+img: './img/products/honey.png',
+name: 'HONEY',
+description: 'Ajwa offers exquisite honey, sourced from premium apiaries, blending purity with unparalleled flavour. Our
+honey is a golden elixir, meticulously harvested from the finest blossoms. Rich in antioxidants and nutrients, Ajwa\'s
+honey delivers a luscious sweetness that encapsulates nature\'s goodness. Elevate your culinary experience with Ajwa\s
+pure and delectable honey.',
+related: [
+{
+name: 'CASHEWS',
+image: './img/products/cashew.png',
+},
+{
+name: 'DATES',
+image: './img/products/dates.png',
+},
+{
+name: 'RASINS',
+image: './img/products/rasins.png',
+},
+{
+name: 'PISTACHIO',
+image: './img/products/pistachio.png',
+},
+]
+},
+{
+id: 7,
+img: './img/products/Pistachio.png',
+name: 'PISTACHIO',
+description: 'Salty, Savory, and Simply Irresistible. We\'ve taken the finest pistachios, expertly roasted them, and
+lightly salted to perfection.Each bite is a flavorful journey that will keep you coming back for more.',
+related: [
+{
+name: 'CASHEWS',
+image: './img/products/cashew.png',
+},
+{
+name: 'DATES',
+image: './img/products/dates.png',
+},
+{
+name: 'RASINS',
+image: './img/products/rasins.png',
+},
+{
+name: 'PISTACHIO',
+image: './img/products/makhana.png',
+},
+]
+},
+{
+id: 8,
+img: './img/products/sweets.png',
+name: 'SWEETS',
+description: 'A symbol of confectionery mastery. Our exquisite treats, crafted with precision and premium ingredients,
+deliver pure sweetness and elevate your moments with indulgent luxury. Meticulously handcrafted with the finest
+ingredients, our sweets promise a delightful blend of tradition and exquisite flavour.',
+related: [
+{
+name: 'COOKIES',
+image: './img/products/cookies.png',
+},
+{
+name: 'DATES',
+image: './img/products/dates.png',
+},
+{
+name: 'RASINS',
+image: './img/products/rasins.png',
+},
+{
+name: 'PISTACHIO',
+image: './img/products/pistachio.png',
+},
+]
+},
+
+{
+id: 9,
+img: './img/products/spices.png',
+name: ' SPICES',
+description: 'A trusted name in quality ingredients. Elevate your culinary creations with our premium selection,
+ensuring the finest flavours and culinary excellence. Our premium selection adds depth and flavour to your dishes,
+making every meal a masterpiece.',
+related: [
+{
+name: 'COLD DRINKS',
+image: './img/products/coldrink.png',
+},
+{
+name: 'DATES',
+image: './img/products/dates.png',
+},
+{
+name: 'RASINS',
+image: './img/products/rasins.png',
+},
+{
+name: 'PISTACHIO',
+image: './img/products/pistachio.png',
+},
+]
+},
+
+{
+id: 10,
+img: './img/products/cookies.png',
+name: 'COOKIES',
+description: 'Ajwa\'s Bakery offers a delectable array of freshly baked goods, from mouthwatering pastries to artisanal
+breads.Every item is crafted with passion and precision, ensuring a delightful experience for every customer.With a
+commitment to quality, Ajwa\'s Bakery brings a symphony of flavours to satisfy diverse palates, leaving patrons craving
+more.',
+related: [
+{
+name: 'CASHEWS',
+image: './img/products/cashew.png',
+},
+{
+name: 'COLD DRINKS',
+image: './img/products/coldrink.png',
+},
+{
+name: 'RASINS',
+image: './img/products/rasins.png',
+},
+{
+name: 'PISTACHIO',
+image: './img/products/pistachio.png',
+},
+
+]
+},
+{
+id: 11,
+img: './img/products/coldrink.png',
+name: 'COLD DRINKS',
+description: 'Ajwa presents a refreshing array of cold drinks that captivate the taste buds with their delightful
+flavors. From fruity concoctions bursting with tropical goodness to classic sodas and chilled beverages, each sip is a
+journey into cool, satisfying refreshment. Elevate your thirst-quenching experience with Ajwa\'s diverse and
+invigorating cold drink selection.',
+related: [
+{
+name: 'CASHEWS',
+image: './img/products/cashew.png',
+},
+{
+name: 'DATES',
+image: './img/products/dates.png',
+},
+{
+name: 'RASINS',
+image: './img/products/rasins.png',
+},
+{
+name: 'PISTACHIO',
+image: './img/products/pistachio.png',
+},
+]
+},
+{
+id: 12,
+img: './img/products/gifts.png',
+name: 'GIFTS',
+description: 'Ajwa offers exquisite gift packs that blend luxury and taste. Our curated selection features premium
+dates, rich in flavour and nutrition. Each pack is a perfect fusion of tradition and sophistication, making it an ideal
+gift for any occasion. Elevate your gifting experience with Ajwa\'s signature collection of indulgent date varieties.',
+related: [
+{
+name: 'COLD DRINKS',
+image: './img/products/coldrink.png',
+},
+{
+name: 'DATES',
+image: './img/products/dates.png',
+},
+{
+name: 'RASINS',
+image: './img/products/rasins.png',
+},
+{
+name: 'PISTACHIO',
+image: './img/products/pistachio.png',
+},
+]
+},
+{
+id: 13,
+img: './img/products/driedFruits.png',
+name: 'DRIED FRUITS',
+description: 'A hallmark of exquisite snacking. Carefully sourced and preserved for optimal flavour and nutrition, our
+selection defines premium quality and healthy indulgence. Handpicked and carefully preserved, these dried fruits embody
+natural sweetness and superior quality.',
+related: [
+{
+name: 'COLD DRINKS',
+image: './img/products/coldrink.png',
+},
+{
+name: 'DATES',
+image: './img/products/dates.png',
+},
+{
+name: 'RASINS',
+image: './img/products/rasins.png',
+},
+{
+name: 'PISTACHIO',
+image: './img/products/pistachio.png',
+},
+]
+},
+{
+id: 14,
+img: './img/products/dryFruits.png',
+name: 'DRY FRUITS',
+description: 'A testament to premium snacking. Carefully selected and packaged, our premium offerings embody superior
+quality and exceptional flavour. Our selection is meticulously sourced and thoughtfully packaged and delivers
+unparalleled quality, health benefits, and exquisite taste.',
+related: [
+{
+name: 'COLD DRINKS',
+image: './img/products/coldrink.png',
+},
+{
+name: 'DATES',
+image: './img/products/dates.png',
+},
+{
+name: 'RASINS',
+image: './img/products/rasins.png',
+},
+{
+name: 'PISTACHIO',
+image: './img/products/pistachio.png',
+},
+]
+},
+{
+id: 15,
+img: './img/products/chocolates.png',
+name: 'CHOCOLATES',
+description: 'A hallmark of excellence in confectionery. Meticulously crafted from the finest ingredients, our
+chocolates promise pure delight and a taste of luxury in every bite. Crafted with precision and the finest ingredients,
+our chocolates embody luxury, sophistication, and unparalleled taste.',
+related: [
+{
+name: 'COLD DRINKS',
+image: './img/products/coldrink.png',
+},
+{
+name: 'DATES',
+image: './img/products/dates.png',
+},
+{
+name: 'RASINS',
+image: './img/products/rasins.png',
+},
+{
+name: 'PISTACHIO',
+image: './img/products/pistachio.png',
+},
+]
+},
+],
+
+};

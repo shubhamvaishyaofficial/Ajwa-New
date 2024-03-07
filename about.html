@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Commerce</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body class="font-serif bg-[#D2B48C]">
+    <!-- Navbar -->
+    <nav class="sticky top-0 z-50 flex items-center justify-between flex-wrap bg-[#f3f4f6] p-6">
+        <div class="flex items-center flex-shrink-0 text-[#d1b48c] mr-6">
+            <img src="./img/logo.png" alt="logo" class="ml-8 w-40 mr-2">
+        </div>
+        <div class="block lg:hidden">
+            <button id="menu-button"
+                class="flex items-center px-3 py-2 border rounded text-black border-[#d1b48c] hover:text-[#d1b48c] hover:border-[#d1b48c]">
+                <svg id="menu-icon" class="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                    <title>Menu</title>
+                    <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v15z" />
+                </svg>
+            </button>
+        </div>
+        <div id="menu" class="w-full block flex-grow lg:flex lg:items-center lg:w-auto hidden lg:justify-end space-x-4">
+            <div class="text-sm lg:flex-grow lg:flex lg:justify-end space-x-8">
+                <a href="./index.html" class="block mt-4 lg:inline-block lg:mt-0 text-black hover:text-[#d1b48c] ml-8">
+                    HOME
+                </a>
+                <a href="#about" class="block mt-4 lg:inline-block lg:mt-0 text-[#d1b48c] hover:text-[#d1b48c] mr-4">
+                    ABOUT
+                </a>
+                <a href="./products.html"
+                    class="active relative block mt-4 lg:inline-block lg:mt-0 text-black hover:text-[#d1b48c] mr-4">
+                    <div class="flex items-center">
+                        <span>PRODUCTS</span>
+                    </div>
+                </a>
+                <a href="./blogs.html" class="block mt-4 lg:inline-block lg:mt-0 text-black hover:text-[#d1b48c] mr-4">
+                    BLOGS
+                </a>
+                <a href="./contact.html"
+                    class="block mt-4 lg:inline-block lg:mt-0 text-black hover:text-[#d1b48c] mr-4">
+                    CONTACT
+                </a>
+                <a href="./locations.html"
+                    class="block mt-4 lg:inline-block lg:mt-0 text-black hover:text-[#62acb4] mr-4">
+                    LOCATIONS
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <article>
+            <!-- Preloader -->
+            <div id="preloader"
+                class="fixed bg-[#D2B48C] z-50 top-0 left-0 w-full h-full flex flex-col justify-center items-center">
+                <div class="relative pb-4">
+                    <div class="animate-spin rounded-full h-32 w-32 border-t-2 border-b-2 border-[#f3f4f6] absolute">
+                    </div>
+                    <img src="./img/preloader.gif" alt="Fruit Cartoon Animation" class="w-32 h-32 object-cover">
+                </div>
+                <h2 class="text-6xl text-[#f3f4f6] font-bold mb-4">
+                    <span class="loader_text inline-block animate-opacityScale delay-100">A</span>
+                    <span class="loader_text inline-block animate-opacityScale delay-200">J</span>
+                    <span class="loader_text inline-block animate-opacityScale delay-300">W</span>
+                    <span class="loader_text inline-block animate-opacityScale delay-400">A</span>
+                </h2>
+            </div>
+            
+            <section class="relative">
+                <img src="./img/banner.jpg" alt="">
+                <div
+                    class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white text-2xl md:text-4xl lg:text-5xl font-bold">
+                    <a class="text-black hover:text-white" href="./index.html">HOME</a> >> ABOUT US
+                </div>
+            </section>
+
+            <section class="relative flex flex-col items-center lg:flex-row m-8 p-8 choose pb-16">
+                <div class="w-full">
+                    <img src="./img/logo.png" alt="Logo"
+                        class="object-cover rounded w-full md:h-auto transition ease-in-out duration-200">
+                </div>
+                <div class="w-full gap-10 flex flex-col mt-4 md:mt-0 md:pl-8">
+                    <div class="heading text-center md:text-left">
+                        <h1 class="font-bold text-3xl mb-4">About Us</h1>
+                        <h4 class="sub-heading">
+                            Ajwa House of Dry Fruits, is a brand developed and owned
+                            by Mr. Rizwan Patel & Azhar Patel. We started our first
+                            outlet in Kharghar, in 2014 and now we have 7+ outlets
+                            across INDIA. We brings you a collection of carefully
+                            selected foods from India and across the world. In our
+                            passionate search to offer food that is unique and full
+                            of health, we have ensured you get only the best
+                            prod-ucts.
+                        </h4>
+                    </div>
+
+                    <ul class="list-none space-y-8">
+                        <li class="flex items-center flex-col md:flex-row gap-5">
+                            <div class="rounded-full bg-gray-200 shadow-md p-6 mr-6">
+                                <img src="img/about/1.png" class="lg:w-[30rem]" />
+                            </div>
+                            <div>
+                                <h4 class="text-2xl font-bold">Our Products:</h4>
+                                <p class="text-base">Our products are well-loved for their quality and taste. We have
+                                    gained
+                                    expertise in fine Indian food products and food ingredients across categories: Dry
+                                    Fruits,
+                                    Dried Fruits, Dates, Sweets, Chocolates, Namkeen, Bakery Products, Mukhwaas, Spices,
+                                    Gift Boxes
+                                    and Groceries. We are sure you will find our quality products appetizing.</p>
+                            </div>
+                        </li>
+                        <li class="flex items-center flex-col md:flex-row gap-5">
+                            <div class="rounded-full bg-gray-200 shadow-md p-6 mr-6">
+                                <img src="img/about/2.png" class="lg:w-[10rem] md:w-[10rem]" />
+                            </div>
+                            <div>
+                                <h4 class="text-2xl font-bold">OUR MISSION:</h4>
+                                <p class="text-base">Our Mission is not only to earn money but also Ajwa wants to
+                                    deliver the best
+                                    quality healthy products towards our customers.</p>
+                            </div>
+                        </li>
+                        <li class="flex items-center flex-col md:flex-row gap-5">
+                            <div class="rounded-full bg-gray-200 shadow-md p-6 mr-6">
+                                <img src="img/about/3.png" class="lg:w-[12rem]  md:w-[12rem]" />
+                            </div>
+                            <div>
+                                <h4 class="text-2xl font-bold">OUR VISION:</h4>
+                                <p class="text-base">Our Vision is to establish Ajwa store in every state of our country
+                                    & globally
+                                    so that every people can avail our quality products and keep themselves healthier.
+                                </p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 260">
+                <path fill="#e4e7eb" fill-opacity="1"
+                    d="M0,64L48,80C96,96,192,128,288,144C384,160,480,160,576,176C672,192,768,224,864,224C960,224,1056,192,1152,192C1248,192,1344,224,1392,240L1440,256L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z">
+                </path>
+            </svg>
+            <footer class="bg-beige text-black p-6 text-center bg-[#e4e7eb]">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 m-12">
+                    <div>
+                        <h2 class="font-bold mb-2">CONTACT US</h2>
+                        <p><i class="fas fa-phone"></i> +91-9324566332</p>
+                        <p><i class="fas fa-envelope"></i> ajwahod@gmail.com</p>
+                    </div>
+                    <div>
+                        <h2 class="font-bold mb-2">INFORMATION</h2>
+                        <ul>
+                            <a href="./about.html">
+                                <li>About Us</li>
+                            </a>
+                            <a href="./products.html">
+                                <li>Our Products</li>
+                            </a>
+                            <a href="./blogs.html">
+                                <li>Blogs</li>
+                            </a>
+                        </ul>
+                    </div>
+                    <div>
+                        <h2 class="font-bold mb-2">SOCIAL MEDIA</h2>
+                        <a href="https://www.instagram.com/ajwahouseofdryfruits_official?igsh=MTE1d3ZmYXNyYWxkdQ%3D%3D">
+                            <p><i class="fab fa-instagram"></i> Instagram</p>
+                        </a>
+                    </div>
+                    <div>
+                        <h2 class="font-bold mb-2">CUSTOMER SERVICE</h2>
+                        <ul>
+                            <a href="./contact.html">
+                                <li>Contact Us</li>
+                            </a>
+                            <a href="./locations.html">
+                                <li>Locations</li>
+                            </a>
+                        </ul>
+                    </div>
+                </div>
+                <div class="mt-6">
+                    <p>Powered By RV NETWORKING - 2024</p>
+                </div>
+            </footer>
+        </article>
+    </main>
+    <script src="./script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Commerce</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+</head>
+
+<body class="font-serif relative min-h-[100vh] bg-[#D2B48C]">
+    <!-- Navbar -->
+    <nav class="sticky top-0 z-50 flex items-center justify-between flex-wrap bg-[#f3f4f6] p-6">
+        <div class="flex items-center flex-shrink-0 text-[#d1b48c] mr-6">
+            <img src="./img/logo.png" alt="logo" class="ml-8 w-40 mr-2">
+        </div>
+        <div class="block lg:hidden">
+            <button id="menu-button"
+                class="flex items-center px-3 py-2 border rounded text-black border-[#d1b48c] hover:text-[#d1b48c] hover:border-[#d1b48c]">
+                <svg id="menu-icon" class="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                    <title>Menu</title>
+                    <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v15z" />
+                </svg>
+            </button>
+        </div>
+        <div id="menu" class="w-full block flex-grow lg:flex lg:items-center lg:w-auto hidden lg:justify-end space-x-4">
+            <div class="text-sm lg:flex-grow lg:flex lg:justify-end space-x-8">
+                <a href="#home" class="block mt-4 lg:inline-block lg:mt-0 text-[#d1b48c] hover:text-[#d1b48c] ml-8">
+                    HOME
+                </a>
+                <a href="./about.html" class="block mt-4 lg:inline-block lg:mt-0 text-black hover:text-[#d1b48c] mr-4">
+                    ABOUT
+                </a>
+                <a href="./products.html"
+                    class="active relative block mt-4 lg:inline-block lg:mt-0 text-black hover:text-[#d1b48c] mr-4">
+                    <div class="flex items-center">
+                        <span>PRODUCTS</span>
+                    </div>
+                </a>
+                <a href="./blogs.html" class="block mt-4 lg:inline-block lg:mt-0 text-black hover:text-[#d1b48c] mr-4">
+                    BLOGS
+                </a>
+                <a href="./contact.html"
+                    class="block mt-4 lg:inline-block lg:mt-0 text-black hover:text-[#d1b48c] mr-4">
+                    CONTACT
+                </a>
+                <a href="./locations.html"
+                    class="block mt-4 lg:inline-block lg:mt-0 text-black hover:text-[#62acb4] mr-4">
+                    LOCATIONS
+                </a>
+            </div>
+            <!-- <div>
+                            <a href="./cart.html" class="block mt-4 lg:inline-block lg:mt-0 text-black hover:bg-[#d1b48c] ml-4 w-8">
+                                <img src="./img/cart.png">
+                            </a>
+                        </div> -->
+        </div>
+    </nav>
+
+    <main>
+        <article>
+            <!-- Preloader -->
+            <div id="preloader"
+                class="fixed bg-[#D2B48C] z-50 top-0 left-0 w-full h-full flex flex-col justify-center items-center">
+                <div class="relative pb-4">
+                    <div class="animate-spin rounded-full h-32 w-32 border-t-2 border-b-2 border-[#f3f4f6] absolute">
+                    </div>
+                    <img src="./img/preloader.gif" alt="Fruit Cartoon Animation"
+                        class="w-32 h-32 object-cover">
+                </div>
+                <h2 class="text-6xl text-[#f3f4f6] font-bold mb-4">
+                    <span class="loader_text inline-block animate-opacityScale delay-100">A</span>
+                    <span class="loader_text inline-block animate-opacityScale delay-200">J</span>
+                    <span class="loader_text inline-block animate-opacityScale delay-300">W</span>
+                    <span class="loader_text inline-block animate-opacityScale delay-400">A</span>
+                </h2>
+            </div>
+
+            <!-- Home Section -->
+            <section id="home" class="relative flex justify-center items-center w-full max-h-screen">
+                <div id="carousel" class="flex overflow-x-hidden w-full">
+                    <div class="max-w-full md:w-5/6 h-auto mx-auto">
+                        <img src="./img/homebg.png" alt="Image" class="w-full h-auto object-cover blur-load"
+                            data-src="./img/homebg.png">
+                    </div>
+                    <div class="max-w-full md:w-5/6 h-auto mx-auto">
+                        <img src="./img/homebg2.png" alt="Image" class="w-full h-auto object-cover blur-load"
+                            data-src="./img/homebg2.png">
+                    </div>
+                    <div class="max-w-full md:w-5/6 h-auto mx-auto">
+                        <img src="./img/homebg3.png" alt="Image" class="w-full h-auto object-cover blur-load"
+                            data-src="./img/homebg3.png">
+                    </div>
+                </div>
+            </section>
+
+            <!-- Destails Srction -->
+            <section class="flex w-full p-12">
+                <div class="container mx-auto bg-[#e4e7eb] w-full rounded-lg shadow-md p-12 mt-8">
+                    <div class="flex flex-col md:flex-row justify-between">
+                        <!-- Quality Products -->
+                        <div class="flex flex-col items-center mb-4 md:mb-0">
+                            <img src="./img/services/1.png" alt="Quality Products Icon"
+                                class="w-30 mb-2 transform transition duration-500 hover:scale-125">
+                            <h2 class="text-xl font-semibold mb-2">Quality Products</h2>
+                            <p class="text-gray-600 text-md">We ensures that customers gets premium quality products.
+                            </p>
+                        </div>
+                        <!-- Multiple Quality Checks -->
+                        <div class="flex flex-col items-center mb-4 md:mb-0">
+                            <img src="./img/services/2.png" alt="Multiple Quality Checks Icon"
+                                class="w-30 mb-2 transform transition duration-500 hover:scale-125">
+                            <h2 class="text-xl font-semibold mb-2">Multiple Quality Checks</h2>
+                            <p class="text-gray-600 text-md">The products go through multiple checks before it delivers
+                                to customers.</p>
+                        </div>
+                        <!-- Premium Packing -->
+                        <div class="flex flex-col items-center">
+                            <img src="./img/services/3.png" alt="Premium Packing Icon"
+                                class="w-30 mb-2 transform transition duration-500 hover:scale-125">
+                            <h2 class="text-xl font-semibold mb-2">Premium Packing</h2>
+                            <p class="text-gray-600 text-md">We deliver your products with premium packaging.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Products Section -->
+            <section x-data="{ showCategories: false, showNewContent: true }" class="pb-8">
+                <div class="flex justify-between items-center">
+                    <div></div>
+                    <h1 class="text-center text-4xl md:text-5xl p-4 align-center sm:pl-[4em]">
+                        <span x-text="showCategories ? 'CATEGORIES' : 'OUR PRODUCTS'"></span>
+                    </h1>
+                    <button @click="showCategories = !showCategories, showNewContent = !showNewContent"
+                        class="bg-[#f3f4f6] text-black rounded m-4 px-2 py-1 transform hover:scale-105 transition-transform duration-200 ease-in-out shadow-md">
+                        <span x-text="showCategories ? 'View Products' : 'View Categories'"></span>
+                    </button>
+                </div>
+                <div class="w-16 border-b-2 border-black mx-auto my-2"></div>
+                <div x-show="showNewContent" x-transition:enter="transition ease-out duration-500"
+                    x-transition:enter-start="transform opacity-0 scale-95"
+                    x-transition:enter-end="transform opacity-100 scale-100"
+                    x-transition:leave="transition ease-in duration-500"
+                    x-transition:leave-start="transform opacity-100 scale-100"
+                    x-transition:leave-end="transform opacity-0 scale-95">
+                    <div
+                        x-data="{ redirectToProductDetails: function(id) { window.location.href = 'product-details.html?id=' + id; } }">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 p-8 m-8">
+                            <template x-for="(product, index) in [
+                                { id: 5, img: './img/products/almond.png', name: 'Almonds'},
+                                { id: 1, img: './img/products/cashew.png', name: 'Cashew'},
+                                { id: 6, img: './img/products/honey.png', name: 'Honey'},
+                                { id: 2, img: './img/products/Rasins.png', name: 'Rasins'}
+                            ]" :key="index">
+                                <div @click="redirectToProductDetails(product.id)"
+                                    class="bg-[#e4e7eb] p-4 rounded-lg hover:cursor-pointer">
+                                    <img :src="product.img" :alt="product.name">
+                                    <p class="pt-4" x-text="product.name"></p>
+                                    <span class="text-md text-gray-500" x-text="product.price"></span>
+                                </div>
+                            </template>
+                        </div>
+                    </div>
+                    <div class="flex justify-center pb-4 ">
+                        <a href="products.html"
+                            class="bg-[#f3f4f6] hover:bg-gray-200 text-black py-2 px-4 rounded shadow-md">
+                            Show More Products
+                        </a>
+                    </div>
+                </div>
+
+                <div x-show="showCategories" x-transition:enter="transition ease-out duration-500"
+                    x-transition:enter-start="transform opacity-0 scale-95"
+                    x-transition:enter-end="transform opacity-100 scale-100"
+                    x-transition:leave="transition ease-in duration-500"
+                    x-transition:leave-start="transform opacity-100 scale-100"
+                    x-transition:leave-end="transform opacity-0 scale-95">
+                    <div x-data="{ tab: 'tab-1', showMore: false }"
+                        x-transition:enter="transition ease-out duration-100"
+                        x-transition:enter-start="transform opacity-0 scale-95"
+                        x-transition:enter-end="transform opacity-100 scale-100"
+                        x-transition:leave="transition ease-in duration-75"
+                        x-transition:leave-start="transform opacity-100 scale-100"
+                        x-transition:leave-end="transform opacity-0 scale-95"
+                        class="md:flex-row space-y-2 md:space-y-0 md:space-x-8 space-y-4 p-4">
+                        <ul class="flex justify-center space-x-4 items-center">
+                            <li :class="{ 'border-b-2 border-blue-500': tab === 'tab-1' }" class="cursor-pointer"
+                                @click="tab = 'tab-1'">DRY FRUITS
+                            </li>
+                            <li :class="{ 'border-b-2 border-blue-500': tab === 'tab-2' }" class="cursor-pointer"
+                                @click="tab = 'tab-2'">SPICES
+                            </li>
+                            <li :class="{ 'border-b-2 border-blue-500': tab === 'tab-3' }" class="cursor-pointer"
+                                @click="tab = 'tab-3'">CHOCOLATES
+                            </li>
+                            <li :class="{ 'border-b-2 border-blue-500': tab === 'tab-4' }" class="cursor-pointer"
+                                @click="tab = 'tab-4'">SWEETS
+                            </li>
+                            <li class="cursor-pointer" @click="showMore = !showMore">
+                                <span x-text="showMore ? 'Less' : 'More'"></span>
+                            </li>
+                        </ul>
+                        <ul x-show="showMore" class="flex flex-wrap justify-center space-x-8 items-center sm:p-2">
+                            <li :class="{ 'border-b-2 border-blue-500': tab === 'tab-5' }" class="cursor-pointer"
+                                @click="tab = 'tab-5'">HONEY
+                            </li>
+                            <li :class="{ 'border-b-2 border-blue-500': tab === 'tab-6' }" class="cursor-pointer"
+                                @click="tab = 'tab-6'">BAKERY
+                            </li>
+                            <li :class="{ 'border-b-2 border-blue-500': tab === 'tab-7' }" class="cursor-pointer"
+                                @click="tab = 'tab-7'">MAKHANA
+                            </li>
+                            <li :class="{ 'border-b-2 border-blue-500': tab === 'tab-8' }" class="cursor-pointer"
+                                @click="tab = 'tab-8'">GIFT PACKS
+                            </li>
+                            <li :class="{ 'border-b-2 border-blue-500': tab === 'tab-9' }" class="cursor-pointer"
+                                @click="tab = 'tab-9'">COLD DRINKS
+                            </li>
+                        </ul>
+                        <!-- <ul x-show="showMore" class="flex flex-wrap justify-center space-x-8 items-center sm:p-2">
+                                                            <li :class="{ 'border-b-2 border-blue-500': tab === 'tab-9' }" class="cursor-pointer"
+                                                                @click="tab = 'tab-9'">Ice
+                                                                Cream</li>
+                                                            <li :class="{ 'border-b-2 border-blue-500': tab === 'tab-10' }" class="cursor-pointer"
+                                                                @click="tab = 'tab-10'">Juice
+                                                            </li>
+                                                            <li :class="{ 'border-b-2 border-blue-500': tab === 'tab-11' }" class="cursor-pointer"
+                                                                @click="tab = 'tab-11'">
+                                                                Ketchup</li>
+                                                            <li :class="{ 'border-b-2 border-blue-500': tab === 'tab-12' }" class="cursor-pointer"
+                                                                @click="tab = 'tab-12'">
+                                                                Lettuce</li>
+                                                        </ul>
+                                                        <ul x-show="showMore" class="flex flex-wrap justify-center space-x-8 items-center sm:p-2">
+                                                            <li :class="{ 'border-b-2 border-blue-500': tab === 'tab-13' }" class="cursor-pointer"
+                                                                @click="tab = 'tab-13'">Milk
+                                                            </li>
+                                                            <li :class="{ 'border-b-2 border-blue-500': tab === 'tab-14' }" class="cursor-pointer"
+                                                                @click="tab = 'tab-14'">Nuts
+                                                            </li>
+                                                            <li :class="{ 'border-b-2 border-blue-500': tab === 'tab-15' }" class="cursor-pointer"
+                                                                @click="tab = 'tab-15'">
+                                                                Oranges</li>
+                                                        </ul> -->
+                        <div x-show="tab === 'tab-1'">
+                            <div x-data="{ currentIndex: 0, products: [
+                                                                { id: 5, img: './img/products/almond.png', name: 'ALMONDS' },
+                                                                { id: 1, img: './img/products/cashew.png', name: 'CASHEWS' },
+                                                                { id: 2, img: './img/products/Rasins.png', name: 'RASINS' },
+                                                                { id: 7, img: './img/products/Pistachio.png', name: 'PISTACHIO' },
+                                                                { id: 3, img: './img/products/makhana.png', name: 'MAKHANA' },
+                                                                { id: 4, img: './img/products/dates.png', name: 'DATES' },
+                                                                { id: 13, img: './img/products/driedFruits.png', name: 'DRIED FRUITS' },
+                                                                { id: 14, img: './img/products/dryFruits.png', name: 'DRY FRUITS' }
+                                                            ] }">
+                                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 p-8">
+                                    <template x-for="(product, index) in products" :key="index">
+                                        <div x-show="currentIndex <= index && index < currentIndex + 4"
+                                            @click="redirectToProductDetails(product.id)"
+                                            class="bg-[#e4e7eb] p-4 rounded-lg hover:cursor-pointer">
+                                            <img :src="product.img" :alt="product.name">
+                                            <p class="pt-4" x-text="product.name"></p>
+                                        </div>
+                                    </template>
+                                </div>
+                                <div class="flex items-center justify-center mt-4">
+                                    <button @click="currentIndex = Math.max(currentIndex - 1, 0)"
+                                        class="w-12 h-12 rounded-full mr-2 bg-[#e4e7eb] text-xl text-center">
+                                        <span class="text-lg">&lt</span>
+                                    </button>
+                                    <button @click="currentIndex = Math.min(currentIndex + 1, products.length - 4)"
+                                        class="w-12 h-12 rounded-full bg-[#e4e7eb] text-xl text-center">
+                                        <span class="text-lg">&gt</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div x-show="tab === 'tab-2'">
+                            <div x-data="{ currentIndex: 0, products: [
+                                                    { id: 9, img: './img/products/spices.png', name: 'SPICES' },
+                                                ] }">
+                                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 p-8">
+                                    <template x-for="(product, index) in products" :key="index">
+                                        <div x-show="currentIndex <= index && index < currentIndex + 4"
+                                            @click="redirectToProductDetails(product.id)"
+                                            class="bg-[#e4e7eb] p-4 rounded-lg hover:cursor-pointer">
+                                            <img :src="product.img" :alt="product.name">
+                                            <p class="pt-4" x-text="product.name"></p>
+                                        </div>
+                                    </template>
+                                </div>
+                            </div>
+                        </div>
+                        <div x-show="tab === 'tab-3'" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 p-8">
+                            <div x-data @click="redirectToProductDetails(15)"
+                                class="bg-[#e4e7eb] p-4 rounded-lg hover:cursor-pointer">
+                                <img src="./img/products/chocolates.png" alt="chocolates">
+                                <p class="pt-4">CHOCOLATES</p>
+                            </div>
+                        </div>
+                        <div x-show="tab === 'tab-4'" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 p-8">
+                            <div x-data @click="redirectToProductDetails(8)"
+                                class="bg-[#e4e7eb] p-4 rounded-lg hover:cursor-pointer">
+                                <img src="./img/products/sweets.png" alt="sweets">
+                                <p class="pt-4">SWEETS</p>
+                            </div>
+                        </div>
+                        <div x-show="tab === 'tab-5'" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 p-8">
+                            <div x-data @click="redirectToProductDetails(6)"
+                                class="bg-[#e4e7eb] p-4 rounded-lg hover:cursor-pointer">
+                                <img src="./img/products/honey.png" alt="honey">
+                                <p class="pt-4">HONEY</p>
+                            </div>
+                        </div>
+                        <div x-show="tab === 'tab-6'" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 p-8">
+                            <div x-data @click="redirectToProductDetails(10)"
+                                class="bg-[#e4e7eb] p-4 rounded-lg hover:cursor-pointer">
+                                <img src="./img/products/cookies.png" alt="cookies">
+                                <p class="pt-4">COOKIES</p>
+                            </div>
+                        </div>
+                        <!-- For tab-7 -->
+                        <div x-show="tab === 'tab-7'" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 p-8">
+                            <div x-data @click="redirectToProductDetails(3)"
+                                class="bg-[#e4e7eb] p-4 rounded-lg hover:cursor-pointer">
+                                <img src="./img/products/makhana.png" alt="makhana">
+                                <p class="pt-4">MAKHANA</p>
+                            </div>
+                        </div>
+                        <!-- For tab-8 -->
+                        <div x-show="tab === 'tab-8'" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 p-8">
+                            <div x-data @click="redirectToProductDetails(12)"
+                                class="bg-[#e4e7eb] p-4 rounded-lg hover:cursor-pointer">
+                                <img src="./img/products/gifts.png" alt="gifts">
+                                <p class="pt-4">GIFT PACKS</p>
+                            </div>
+                        </div>
+                        <!-- For tab-9 -->
+                        <div x-show="tab === 'tab-9'" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 p-8">
+                            <div x-data @click="redirectToProductDetails(11)"
+                                class="bg-[#e4e7eb] p-4 rounded-lg hover:cursor-pointer">
+                                <img src="./img/products/coldrink.png" alt="coldrink">
+                                <p class="pt-4">COLD DRINKS</p>
+                            </div>
+                            <!-- Repeat for other products if needed -->
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Testimonials -->
+            <section x-data="{ currentIndex: 0 }" class="bg-[#e4e7eb] flex w-full p-8">
+                <div class="container mx-auto w-full md:w-5/6 p-4 m-4 relative">
+                    <h1 class="text-center text-2xl md:text-4xl lg:text-5xl p-4 align-center">Testimonials</h1>
+                    <div class="w-16 border-b-2 border-black mx-auto my-2"></div>
+                    <div class="flex flex-col md:flex-row justify-center pb-8">
+                        <!-- Testimonials -->
+                        <div x-show="currentIndex === 0" class="testimonial flex flex-wrap justify-around">
+                            <!-- Quality Products -->
+                            <div class="flex flex-col items-center m-4 md:m-8 mb-4 md:mb-0">
+                                <img src="./img/s.png" alt="Quality Products Icon" class="w-18 h-16 mb-2">
+                                <h2 class="text-lg md:text-xl font-semibold mb-2">Quality Products</h2>
+                                <p class="text-gray-600 text-sm md:text-md">Grocery store offers a wide range of
+                                    high-quality
+                                    products that are
+                                    fresh and reliable.</p>
+                            </div>
+                            <!-- Multiple Quality Checks -->
+                            <div class="flex flex-col items-center m-4 md:m-8 mb-4 md:mb-0">
+                                <img src="./img/j.png" alt="Multiple Quality Checks Icon" class="w-18 h-16 mb-2">
+                                <h2 class="text-lg md:text-xl font-semibold mb-2">Multiple Quality Checks</h2>
+                                <p class="text-gray-600 text-sm md:text-md">Products go through multiple quality checks
+                                    to ensure
+                                    you get the best.
+                                </p>
+                            </div>
+                        </div>
+                        <div x-show="currentIndex === 1" class="testimonial flex flex-wrap justify-around">
+                            <!-- Fast Delivery -->
+                            <div class="flex flex-col items-center m-4 md:m-8 mb-4 md:mb-0">
+                                <img src="./img/v.png" alt="Fast Delivery Icon" class="w-18 h-16 mb-2">
+                                <h2 class="text-lg md:text-xl font-semibold mb-2">Fast Delivery</h2>
+                                <p class="text-gray-600 text-sm md:text-md">We ensure fast delivery so your groceries
+                                    arrive at your
+                                    doorstep
+                                    in no time.
+                                </p>
+                            </div>
+                            <!-- Excellent Customer Service -->
+                            <div class="flex flex-col items-center m-4 md:m-8 mb-4 md:mb-0">
+                                <img src="./img/m.png" alt="Excellent Customer Service Icon" class="w-18 h-16 mb-2">
+                                <h2 class="text-lg md:text-xl font-semibold mb-2">Excellent Customer Service</h2>
+                                <p class="text-gray-600 text-sm md:text-md">Our customer service team is always ready to
+                                    help you
+                                    with your
+                                    needs.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Dots Navigation -->
+                    <div class="absolute bottom-0 left-1/2 transform -translate-x-1/2 flex space-x-2 p-4">
+                        <button @click="currentIndex = 0"
+                            :class="{ 'bg-gray-400': currentIndex !== 0, 'bg-black': currentIndex === 0 }"
+                            class="w-3 h-3 rounded-full"></button>
+                        <button @click="currentIndex = 1"
+                            :class="{ 'bg-gray-400': currentIndex !== 1, 'bg-black': currentIndex === 1 }"
+                            class="w-3 h-3 rounded-full"></button>
+                    </div>
+                </div>
+            </section>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 100">
+                <path fill="#e4e7eb" fill-opacity="1" d="M0,100 Q720,0 1440,100 L1440,100 L0,100"
+                    transform="rotate(180 720 50)">
+                </path>
+            </svg>
+
+            <!-- locations -->
+            <section class="grid grid-cols-1 lg:grid-cols-2 gap-8 p-16">
+                <div
+                    class="w-full container mx-auto bg-[#f3f4f6] rounded-md shadow-md p-8 m-8 relative w-full h-96 sm:h-auto">
+                    <!-- Google Maps iframe -->
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d120687.2972462925!2d72.9814!3d19.0427085!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c21a5a021cf3%3A0xe1ee234b679d6010!2sAjwa%20House%20Of%20Dry%20Fruits!5e0!3m2!1sen!2sin!4v1709203036438!5m2!1sen!2sin"
+                        , width="100%" height="100%" frameborder="0" style="border:0" allowfullscreen></iframe>
+                </div>
+                <div class="flex flex-col w-full md:w-full mt-4 md:mt-0 lg:p-8">
+                    <h1 class="text-4xl flex flex-col items-center font-medium mb-2 text-gray-900">LOCATIONS</h1>
+                    <div class="w-full flex justify-center">
+                        <div class="w-16 flex flex-col items-center border-b-2 border-black"></div>
+                    </div>
+                    <div x-data="{ currentIndex: 0 }" class="w-full xl:m-8 text-2xl">
+                        <div x-show="currentIndex === 0" class="location-content">
+                            <!-- First set of locations -->
+                            <p @click="openMap(1)" title="View Map"
+                                class="container mx-auto bg-[#f3f4f6] w-full rounded-md shadow-md p-8 m-8 relative cursor-pointer">
+                                PANVEL <br><span class="text-sm text-black"><strong>Address: </strong> Shop No 04,
+                                    Natyagrah Complex, Vasudeva Phadke Hall, opp. Saraswati Vidya Mandir School,
+                                    Old Panvel, Navi Mumbai, Maharashtra 410206</span>
+                            </p>
+                            <p @click="openMap(2)" title="View Map"
+                                class="container mx-auto bg-[#f3f4f6] w-full rounded-md shadow-md p-8 m-8 relative cursor-pointer">
+                                KHARGHAR <br> <span class="text-sm text-gray-500"><strong>Address: </strong> Plot No. D,
+                                    Co-op.
+                                    Society, Shree Krishna Paradise Cooperative Housing Society, Shop No. 29, 69, Sector
+                                    12,
+                                    Kharghar, Navi Mumbai, Maharashtra 410210</span></p>
+                            <p @click="openMap(3)" title="View Map"
+                                class="container mx-auto bg-[#f3f4f6] w-full rounded-md shadow-md p-8 m-8 relative cursor-pointer">
+                                BHIWANDI <br> <span class="text-sm text-gray-500"><strong>Address: </strong> Millat
+                                    Nagar, Road
+                                    Number 4, Nashik Rd, Bhiwandi, Maharashtra 421302.</span></p>
+                        </div>
+                        <div x-show="currentIndex === 1" class="location-content">
+                            <!-- Second set of locations -->
+                            <p @click="openMap(4)" title="View Map"
+                                class="container mx-auto bg-[#f3f4f6] w-full rounded-md shadow-md p-8 m-8 relative cursor-pointer">
+                                Mumbra <br> <span class="text-sm text-gray-500"><strong>Address: </strong> Shop No. 1 &
+                                    2, Quality
+                                    Heights Near Shilphata, Mumbra, Thane, Maharashtra 400612.</span></p>
+                            <p @click="openMap(5)" title="View Map"
+                                class="container mx-auto bg-[#f3f4f6] w-full rounded-md shadow-md p-8 m-8 relative cursor-pointer">
+                                AZAMGARH <br> <span class="text-sm text-gray-500"><strong>Address: </strong>
+                                    Zafar Complex, Main Road, Lal Ganj, Azamgarh - 276202 (Near Tehsil).</span></p>
+                            <p @click="openMap(6)" title="View Map"
+                                class="container mx-auto bg-[#f3f4f6] w-full rounded-md shadow-md p-8 m-8 relative cursor-pointer">
+                                SANTACRUZ <br> <span class="text-sm text-gray-500"><strong>Address: </strong>
+                                    Shop No.1, Gr. Floor, Sunanda Apartment, 400 054, Juhu Tara Rd, opposite Mayur
+                                    Hotel, Hasmukh Nagar,
+                                    Santacruz West, Mumbai, Maharashtra 400054.</span></p>
+                        </div>
+                        <div class="flex justify-center mt-4">
+                            <button @click="currentIndex = 0, openMap(0)"
+                                :class="{ 'bg-gray-400': currentIndex !== 0, 'bg-black': currentIndex === 0 }"
+                                class="w-3 h-3 rounded-full mr-2"></button>
+                            <button @click="currentIndex = 1, openMap(0)"
+                                :class="{ 'bg-gray-400': currentIndex !== 1, 'bg-black': currentIndex === 1 }"
+                                class="w-3 h-3 rounded-full mr-2"></button>
+                            <!-- <button @click="currentIndex = 2"
+                                                :class="{ 'bg-gray-400': currentIndex !== 2, 'bg-black': currentIndex === 2 }"
+                                                class="w-3 h-3 rounded-full"></button> -->
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <a href="#" id="scroll" title="Scroll to Top"
+                class="fixed bottom-8 right-8 bg-white rounded-full p-2 shadow-md transition duration-500 ease-in-out transform hover:scale-150">
+                <i class="fa fa-angle-up text-gray-600"></i>
+            </a>
+
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 100">
+                <path fill="#e4e7eb" fill-opacity="1" d="M0,100 Q720,0 1440,100 L1440,100 L0,100"
+                    transform="rotate(360 720 50)">
+                </path>
+            </svg>
+            <footer class="bg-beige text-black p-6 text-center bg-[#e4e7eb]">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 m-12">
+                    <div>
+                        <h2 class="font-bold mb-2">CONTACT US</h2>
+                        <p><i class="fas fa-phone"></i> +91-9324566332</p>
+                        <p><i class="fas fa-envelope"></i> ajwahod@gmail.com</p>
+                    </div>
+                    <div>
+                        <h2 class="font-bold mb-2">INFORMATION</h2>
+                        <ul>
+                            <a href="./about.html">
+                                <li>About Us</li>
+                            </a>
+                            <a href="./products.html">
+                                <li>Our Products</li>
+                            </a>
+                            <a href="./blogs.html">
+                                <li>Blogs</li>
+                            </a>
+                        </ul>
+                    </div>
+                    <div>
+                        <h2 class="font-bold mb-2">SOCIAL MEDIA</h2>
+                        <a href="https://www.instagram.com/ajwahouseofdryfruits_official?igsh=MTE1d3ZmYXNyYWxkdQ%3D%3D">
+                            <p><i class="fab fa-instagram"></i> Instagram</p>
+                        </a>
+                    </div>
+                    <div>
+                        <h2 class="font-bold mb-2">CUSTOMER SERVICE</h2>
+                        <ul>
+                            <a href="./contact.html">
+                                <li>Contact Us</li>
+                            </a>
+                            <a href="./locations.html">
+                                <li>Locations</li>
+                            </a>
+                        </ul>
+                    </div>
+                </div>
+                <div class="mt-6">
+                    <p>Powered By RV NETWORKING - 2024</p>
+                </div>
+            </footer>
+        </article>
+    </main>
+
+    <script src="./script.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+</body>
+
+</html>
