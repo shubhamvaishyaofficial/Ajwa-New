@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
 </head>
 
-<body class="font-serif bg-[#D2B48C]">
+<body class="font-montserrat bg-[#D2B48C]">
     <!-- Navbar -->
     <nav class="sticky top-0 z-50 flex items-center justify-between flex-wrap bg-[#f3f4f6] p-6">
         <div class="flex items-center flex-shrink-0 text-[#d1b48c] mr-6">
@@ -573,21 +573,25 @@
                     window.productDetailsData = productDetailsData;
             </script>
 
+            <a href="#" id="scroll" title="Scroll to Top"
+                class="fixed bottom-8 right-8 bg-white rounded-full p-2 shadow-md transition duration-500 ease-in-out transform hover:scale-150">
+                <i class="fa fa-angle-up text-gray-600"></i>
+            </a>
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 260">
                 <path fill="#e4e7eb" fill-opacity="1"
                     d="M0,64L48,80C96,96,192,128,288,144C384,160,480,160,576,176C672,192,768,224,864,224C960,224,1056,192,1152,192C1248,192,1344,224,1392,240L1440,256L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z">
                 </path>
             </svg>
             <footer class="bg-beige text-black p-6 text-center bg-[#e4e7eb]">
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 m-12">
+                <div class="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-4 lg:m-12 sm:m-0">
                     <div>
-                        <h2 class="font-bold mb-2">CONTACT US</h2>
-                        <p><i class="fas fa-phone"></i> +91-9324566332</p>
-                        <p><i class="fas fa-envelope"></i> ajwahod@gmail.com</p>
+                        <h2 class="font-bold mb-2 text-sm md:text-lg">CONTACT US</h2>
+                        <p class="text-sm md:text-lg"><i class="fas fa-phone"></i> +91-9324566332</p>
+                        <p class="text-sm md:text-lg"><i class="fas fa-envelope"></i> ajwahod@gmail.com</p>
                     </div>
                     <div>
-                        <h2 class="font-bold mb-2">INFORMATION</h2>
-                        <ul>
+                        <h2 class="font-bold mb-2 text-sm md:text-lg">INFORMATION</h2>
+                        <ul class="text-sm md:text-lg">
                             <a href="./about.html">
                                 <li>About Us</li>
                             </a>
@@ -600,14 +604,14 @@
                         </ul>
                     </div>
                     <div>
-                        <h2 class="font-bold mb-2">SOCIAL MEDIA</h2>
+                        <h2 class="font-bold mb-2 text-sm md:text-lg">SOCIAL MEDIA</h2>
                         <a href="https://www.instagram.com/ajwahouseofdryfruits_official?igsh=MTE1d3ZmYXNyYWxkdQ%3D%3D">
-                            <p><i class="fab fa-instagram"></i> Instagram</p>
+                            <p class="text-sm md:text-lg"><i class="fab fa-instagram"></i> Instagram</p>
                         </a>
                     </div>
                     <div>
-                        <h2 class="font-bold mb-2">CUSTOMER SERVICE</h2>
-                        <ul>
+                        <h2 class="font-bold mb-2 text-sm md:text-lg">CUSTOMER SERVICE</h2>
+                        <ul class="text-sm md:text-lg">
                             <a href="./contact.html">
                                 <li>Contact Us</li>
                             </a>
@@ -618,7 +622,7 @@
                     </div>
                 </div>
                 <div class="mt-6">
-                    <p>Powered By RV NETWORKING - 2024</p>
+                    <p class="text-sm md:text-lg">Powered By RV NETWORKING - 2024</p>
                 </div>
             </footer>
         </article>
