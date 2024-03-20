@@ -15,15 +15,15 @@
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
 </head>
 
-<body class="font-montserrat h-[100vh] bg-[#D2B48C]">
+<body class="font-montserrat h-[100vh] bg-[#fff]">
     <!-- Navbar -->
-    <nav class="sticky top-0 z-50 flex items-center justify-between flex-wrap bg-[#f3f4f6] p-6">
-        <div class="flex items-center flex-shrink-0 text-[#d1b48c] mr-6">
+    <nav class="sticky top-0 z-50 flex items-center justify-between flex-wrap bg-[#D2B48C] p-6">
+        <div class="flex items-center flex-shrink-0 text-black mr-6">
             <img src="./img/logo.png" alt="logo" class="ml-8 w-40 mr-2">
         </div>
         <div class="block lg:hidden">
             <button id="menu-button"
-                class="flex items-center px-3 py-2 border rounded text-black border-[#d1b48c] hover:text-[#d1b48c] hover:border-[#d1b48c]">
+                class="flex items-center px-3 py-2 border rounded text-[#fff] border-black hover:text-black hover:border-black">
                 <svg id="menu-icon" class="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                     <title>Menu</title>
                     <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v15z" />
@@ -32,30 +32,32 @@
         </div>
         <div id="menu" class="w-full block flex-grow lg:flex lg:items-center lg:w-auto hidden lg:justify-end space-x-4">
             <div class="text-sm lg:flex-grow lg:flex lg:justify-end space-x-8">
-                <a href="./index.html" class="block mt-4 lg:inline-block lg:mt-0 text-black hover:text-[#d1b48c] ml-8">
+                <a href="./index.html" class="block mt-4 lg:inline-block lg:mt-0 text-[#fff] hover:text-black ml-8">
                     HOME
                 </a>
-                <a href="./about.html" class="block mt-4 lg:inline-block lg:mt-0 text-black hover:text-[#d1b48c] mr-4">
+                <a href="./about.html" class="block mt-4 lg:inline-block lg:mt-0 text-[#fff] hover:text-black mr-4">
                     ABOUT
                 </a>
                 <a href="./products.html"
-                    class="active relative block mt-4 lg:inline-block lg:mt-0 text-[#d1b48c] hover:text-[#d1b48c] mr-4">
+                    class="active relative block mt-4 lg:inline-block lg:mt-0 text-black hover:text-black mr-4">
                     <div class="flex items-center">
                         <span>PRODUCTS</span>
                     </div>
                 </a>
-                <a href="./blogs.html" class="block mt-4 lg:inline-block lg:mt-0 text-black hover:text-[#d1b48c] mr-4">
+                <a href="./blogs.html" class="block mt-4 lg:inline-block lg:mt-0 text-[#fff] hover:text-black mr-4">
                     BLOGS
                 </a>
-                <a href="./contact.html" class="block mt-4 lg:inline-block lg:mt-0 text-black hover:text-[#d1b48c] mr-4">
+                <a href="./contact.html"
+                    class="block mt-4 lg:inline-block lg:mt-0 text-[#fff] hover:text-black mr-4">
                     CONTACT
                 </a>
-                <a href="./locations.html" class="block mt-4 lg:inline-block lg:mt-0 text-black hover:text-[#62acb4] mr-4">
+                <a href="./locations.html"
+                    class="block mt-4 lg:inline-block lg:mt-0 text-[#fff] hover:text-[#62acb4] mr-4">
                     LOCATIONS
                 </a>
             </div>
             <!-- <div>
-                                <a href="./cart.html" class="block mt-4 lg:inline-block lg:mt-0 text-black hover:bg-[#d1b48c] ml-4 w-8">
+                                <a href="./cart.html" class="block mt-4 lg:inline-block lg:mt-0 text-[#fff] hover:bg-black ml-4 w-8">
                                     <img src="./img/cart.png">
                                 </a>
                             </div> -->
@@ -68,11 +70,11 @@
             <div id="preloader"
                 class="fixed bg-[#D2B48C] z-50 top-0 left-0 w-full h-full flex flex-col justify-center items-center">
                 <div class="relative pb-4">
-                    <div class="animate-spin rounded-full h-32 w-32 border-t-2 border-b-2 border-[#f3f4f6] absolute">
+                    <div class="animate-spin rounded-full h-32 w-32 border-t-2 border-b-2 border-[#D2B48C] absolute">
                     </div>
                     <img src="./img/preloader.gif" alt="Fruit Cartoon Animation" class="w-32 h-32 object-cover">
                 </div>
-                <h2 class="text-6xl text-[#f3f4f6] font-bold mb-4">
+                <h2 class="text-6xl text-[#D2B48C] font-bold mb-4">
                     <span class="loader_text inline-block animate-opacityScale delay-100">A</span>
                     <span class="loader_text inline-block animate-opacityScale delay-200">J</span>
                     <span class="loader_text inline-block animate-opacityScale delay-300">W</span>
@@ -82,8 +84,8 @@
             <section class="relative">
                 <img src="./img/banner.jpg" alt="">
                 <div
-                    class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white text-2xl md:text-4xl lg:text-5xl font-bold">
-                    <a class="text-black hover:text-white" href="./index.html">HOME</a> >> PRODUCTS
+                    class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-[#D2B48C] text-2xl md:text-4xl lg:text-5xl font-bold">
+                    <a class="text-black hover:text-[#D2B48C]" href="./index.html">HOME</a> >> PRODUCTS
                 </div>
             </section>
             <!-- Products Section -->
@@ -93,7 +95,7 @@
                         <span x-text="showCategories ? 'CATEGORIES' : 'OUR PRODUCTS'"></span>
                     </h1>
                     <!-- <button @click="showCategories = !showCategories, showNewContent = !showNewContent"
-                        class="bg-[#f3f4f6] text-black rounded m-4 px-2 py-1 transform hover:scale-105 transition-transform duration-200 ease-in-out shadow-md">
+                        class="bg-[#D2B48C] text-[#fff] rounded m-4 px-2 py-1 transform hover:scale-105 transition-transform duration-200 ease-in-out shadow-md">
                         <span x-text="showCategories ? 'View All Products' : 'View Categories'"></span>
                     </button> -->
                 </div>
@@ -125,21 +127,21 @@
                         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 p-16">
                             <template x-for="(product, index) in products.slice(currentIndex, currentIndex + 8)"
                                 :key="index">
-                                <div class="bg-[#e4e7eb] p-4 rounded-lg hover:cursor-pointer"
+                                <div class="bg-[#e3d1b9] p-4 rounded-lg hover:cursor-pointer"
                                     @click="redirectToProductDetails(product.id)">
                                     <img :src="product.img" :alt="product.name">
-                                    <p class="pt-4" x-text="product.name"></p>
+                                    <p class="pt-4 text-center text-black" x-text="product.name"></p>
                                 </div>
                             </template>
                         </div>
                         <div class="flex items-center justify-center mt-4">
                             <button @click="currentIndex = Math.max(currentIndex - 8, 0)"
-                                class="w-12 h-12 rounded-full mr-2 bg-[#e4e7eb] text-xl text-center">
-                                <span class="text-lg">&lt</span>
+                                class="w-12 h-12 rounded-full mr-2 bg-[#e3d1b9] text-xl text-center">
+                                <span class="text-lg text-black">&lt</span>
                             </button>
                             <button @click="currentIndex = Math.min(currentIndex + 8, products.length - 8)"
-                                class="w-12 h-12 rounded-full bg-[#e4e7eb] text-xl text-center">
-                                <span class="text-lg">&gt</span>
+                                class="w-12 h-12 rounded-full bg-[#e3d1b9] text-xl text-center">
+                                <span class="text-lg text-black">&gt</span>
                             </button>
                         </div>
                     </div>
@@ -242,7 +244,7 @@
                                     <template x-for="(product, index) in products" :key="index">
                                         <div x-show="currentIndex <= index && index < currentIndex + 4"
                                             @click="redirectToProductDetails(product.id)"
-                                            class="bg-[#e4e7eb] p-4 rounded-lg hover:cursor-pointer">
+                                            class="bg-[#D2B48C] p-4 rounded-lg hover:cursor-pointer">
                                             <img :src="product.img" :alt="product.name">
                                             <p class="pt-4" x-text="product.name"></p>
                                         </div>
@@ -250,11 +252,11 @@
                                 </div>
                                 <div class="flex items-center justify-center mt-4">
                                     <button @click="currentIndex = Math.max(currentIndex - 1, 0)"
-                                        class="w-12 h-12 rounded-full mr-2 bg-[#e4e7eb] text-xl text-center">
+                                        class="w-12 h-12 rounded-full mr-2 bg-[#D2B48C] text-xl text-center">
                                         <span class="text-lg">&lt</span>
                                     </button>
                                     <button @click="currentIndex = Math.min(currentIndex + 1, products.length - 4)"
-                                        class="w-12 h-12 rounded-full bg-[#e4e7eb] text-xl text-center">
+                                        class="w-12 h-12 rounded-full bg-[#D2B48C] text-xl text-center">
                                         <span class="text-lg">&gt</span>
                                     </button>
                                 </div>
@@ -268,7 +270,7 @@
                                     <template x-for="(product, index) in products" :key="index">
                                         <div x-show="currentIndex <= index && index < currentIndex + 4"
                                             @click="redirectToProductDetails(product.id)"
-                                            class="bg-[#e4e7eb] p-4 rounded-lg hover:cursor-pointer">
+                                            class="bg-[#D2B48C] p-4 rounded-lg hover:cursor-pointer">
                                             <img :src="product.img" :alt="product.name">
                                             <p class="pt-4" x-text="product.name"></p>
                                         </div>
@@ -278,28 +280,28 @@
                         </div>
                         <div x-show="tab === 'tab-3'" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 p-8">
                             <div x-data @click="redirectToProductDetails(15)"
-                                class="bg-[#e4e7eb] p-4 rounded-lg hover:cursor-pointer">
+                                class="bg-[#D2B48C] p-4 rounded-lg hover:cursor-pointer">
                                 <img src="./img/products/chocolates.png" alt="chocolates">
                                 <p class="pt-4">CHOCOLATES</p>
                             </div>
                         </div>
                         <div x-show="tab === 'tab-4'" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 p-8">
                             <div x-data @click="redirectToProductDetails(8)"
-                                class="bg-[#e4e7eb] p-4 rounded-lg hover:cursor-pointer">
+                                class="bg-[#D2B48C] p-4 rounded-lg hover:cursor-pointer">
                                 <img src="./img/products/sweets.png" alt="sweets">
                                 <p class="pt-4">SWEETS</p>
                             </div>
                         </div>
                         <div x-show="tab === 'tab-5'" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 p-8">
                             <div x-data @click="redirectToProductDetails(6)"
-                                class="bg-[#e4e7eb] p-4 rounded-lg hover:cursor-pointer">
+                                class="bg-[#D2B48C] p-4 rounded-lg hover:cursor-pointer">
                                 <img src="./img/products/honey.png" alt="honey">
                                 <p class="pt-4">HONEY</p>
                             </div>
                         </div>
                         <div x-show="tab === 'tab-6'" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 p-8">
                             <div x-data @click="redirectToProductDetails(10)"
-                                class="bg-[#e4e7eb] p-4 rounded-lg hover:cursor-pointer">
+                                class="bg-[#D2B48C] p-4 rounded-lg hover:cursor-pointer">
                                 <img src="./img/products/cookies.png" alt="cookies">
                                 <p class="pt-4">COOKIES</p>
                             </div>
@@ -307,7 +309,7 @@
                         <!-- For tab-7 -->
                         <div x-show="tab === 'tab-7'" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 p-8">
                             <div x-data @click="redirectToProductDetails(3)"
-                                class="bg-[#e4e7eb] p-4 rounded-lg hover:cursor-pointer">
+                                class="bg-[#D2B48C] p-4 rounded-lg hover:cursor-pointer">
                                 <img src="./img/products/makhana.png" alt="makhana">
                                 <p class="pt-4">MAKHANA</p>
                             </div>
@@ -315,7 +317,7 @@
                         <!-- For tab-8 -->
                         <div x-show="tab === 'tab-8'" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 p-8">
                             <div x-data @click="redirectToProductDetails(12)"
-                                class="bg-[#e4e7eb] p-4 rounded-lg hover:cursor-pointer">
+                                class="bg-[#D2B48C] p-4 rounded-lg hover:cursor-pointer">
                                 <img src="./img/products/gifts.png" alt="gifts">
                                 <p class="pt-4">GIFT PACKS</p>
                             </div>
@@ -323,7 +325,7 @@
                         <!-- For tab-9 -->
                         <div x-show="tab === 'tab-9'" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 p-8">
                             <div x-data @click="redirectToProductDetails(11)"
-                                class="bg-[#e4e7eb] p-4 rounded-lg hover:cursor-pointer">
+                                class="bg-[#D2B48C] p-4 rounded-lg hover:cursor-pointer">
                                 <img src="./img/products/coldrink.png" alt="coldrink">
                                 <p class="pt-4">COLD DRINKS</p>
                             </div>
@@ -338,45 +340,46 @@
                 <i class="fa fa-angle-up text-gray-600"></i>
             </a>
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 260">
-                <path fill="#e4e7eb" fill-opacity="1"
+                <path fill="#D2B48C" fill-opacity="1"
                     d="M0,64L48,80C96,96,192,128,288,144C384,160,480,160,576,176C672,192,768,224,864,224C960,224,1056,192,1152,192C1248,192,1344,224,1392,240L1440,256L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z">
                 </path>
             </svg>
-            <footer class="bg-beige text-black p-6 text-center bg-[#e4e7eb]">
+            <footer class="mt-[-1px] bg-beige text-white p-6 text-center bg-[#D2B48C]">
                 <div class="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-4 lg:m-12 sm:m-0">
                     <div>
                         <h2 class="font-bold mb-2 text-sm md:text-lg">CONTACT US</h2>
                         <p class="text-sm md:text-lg"><i class="fas fa-phone"></i> +91-9324566332</p>
-                        <p class="text-sm md:text-lg"><i class="fas fa-envelope text-[10px]"></i> ajwahod@gmail.com</p>
+                        <p class="text-sm md:text-lg"><i class="fas fa-envelope text-[10px] lg:text-[20px]"></i>
+                            ajwahod@gmail.com</p>
                     </div>
                     <div>
                         <h2 class="font-bold mb-2 text-sm md:text-lg">INFORMATION</h2>
                         <ul class="text-sm md:text-lg">
                             <a href="./about.html">
-                                <li>About Us</li>
+                                <li class="hover:text-black">About Us</li>
                             </a>
                             <a href="./products.html">
-                                <li>Our Products</li>
+                                <li class="hover:text-black">Our Products</li>
                             </a>
                             <a href="./blogs.html">
-                                <li>Blogs</li>
+                                <li class="hover:text-black">Blogs</li>
                             </a>
                         </ul>
                     </div>
                     <div>
                         <h2 class="font-bold mb-2 text-sm md:text-lg">SOCIAL MEDIA</h2>
                         <a href="https://www.instagram.com/ajwahouseofdryfruits_official?igsh=MTE1d3ZmYXNyYWxkdQ%3D%3D">
-                            <p class="text-sm md:text-lg"><i class="fab fa-instagram"></i> Instagram</p>
+                            <p class="text-sm md:text-lg hover:text-black"><i class="fab fa-instagram"></i> Instagram</p>
                         </a>
                     </div>
                     <div>
                         <h2 class="font-bold mb-2 text-sm md:text-lg">CUSTOMER SERVICE</h2>
                         <ul class="text-sm md:text-lg">
                             <a href="./contact.html">
-                                <li>Contact Us</li>
+                                <li class="hover:text-black">Contact Us</li>
                             </a>
                             <a href="./locations.html">
-                                <li>Locations</li>
+                                <li class="hover:text-black">Locations</li>
                             </a>
                         </ul>
                     </div>
